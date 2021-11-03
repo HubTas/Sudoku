@@ -1,10 +1,10 @@
 package pl.first.firstjava;
 
 public class SudokuBoard {
-    BacktrackingSudokuSolver solver;
+    private BacktrackingSudokuSolver solver;
     private int[][] board;
-    public SudokuBoard() {
-         solver = new BacktrackingSudokuSolver();
+    public SudokuBoard(BacktrackingSudokuSolver solver) {
+        this.solver = solver;
         board = new int[9][9];
     }
     public void solveGame()

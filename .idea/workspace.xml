@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26f8275a-045b-49db-9704-836a65531d20" name="Default Changelist" comment="&quot;Przeksztalcanie struktury projektu&quot;">
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/first/firstjava/SudokuBox.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/first/firstjava/SudokuColumn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/first/firstjava/SudokuField.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/first/firstjava/SudokuRow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/first/firstjava/Verifier.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/first/firstjava/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/first/firstjava/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/first/firstjava/SudokuBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/first/firstjava/SudokuBoard.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,6 +43,7 @@
       </branch-storage>
     </favorite-branches>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -131,7 +138,8 @@
       <workItem from="1634819176753" duration="1631000" />
       <workItem from="1634829301726" duration="181000" />
       <workItem from="1634833189145" duration="1812000" />
-      <workItem from="1634845082819" duration="683000" />
+      <workItem from="1634845082819" duration="806000" />
+      <workItem from="1635965031778" duration="1240000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;Przeksztalcanie struktury projektu&quot;">
       <created>1634845564660</created>
@@ -147,7 +155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1634845750206</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="&quot;Przeksztalcanie struktury projektu&quot;">
+      <created>1634845796340</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1634845796340</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,6 +195,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="&quot;Przeksztalcanie struktury projektu&quot;" />
