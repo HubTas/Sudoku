@@ -1,7 +1,8 @@
 package pl.first.firstjava;
 
 public class BacktrackingSudokuSolver  implements SudokuSolver {
-    private void roll3x3(int startx,int starty, final SudokuBoard board) {             //generowanie losowe kwadratu
+    //generowanie losowe kwadratu
+    private void roll3x3(int startx,int starty, final SudokuBoard board) {
         int x;
         for (int i = startx;i < startx + 3;i++) {
             for (int j = starty;j < starty + 3;j++) {
@@ -12,6 +13,7 @@ public class BacktrackingSudokuSolver  implements SudokuSolver {
             }
         }
     }
+
     private boolean fillRemaining(int i, int j, final SudokuBoard board) {
         if (j >= 9 && i < 8) {
             i = i + 1;
@@ -49,6 +51,7 @@ public class BacktrackingSudokuSolver  implements SudokuSolver {
         }
         return false;
     }
+
     @Override
     public void solve(final SudokuBoard board) {
         roll3x3(0,0, board);                       //Generuje 3 wypelnione kwadraty po skosie

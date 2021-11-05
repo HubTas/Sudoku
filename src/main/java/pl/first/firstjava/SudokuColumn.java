@@ -1,4 +1,4 @@
 package pl.first.firstjava;
 
-public class SudokuColumn {
+public class SudokuColumn extends SudokuSection{
 }

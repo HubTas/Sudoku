@@ -7,9 +7,9 @@ package pl.first.firstjava;
  */
 public class App {
     public static void main(final String[] args) {
-//        SudokuBoard test = new SudokuBoard();
-//        BacktrackingSudokuSolver solver = new BacktrackingSudokuSolver();
-//        test.solveGame();
-//        test.printout();
+            SudokuSolver solver = new BacktrackingSudokuSolver();
+            SudokuBoard test = new SudokuBoard(solver);
+            test.solveGame();
+            test.printout();
     }
 }
