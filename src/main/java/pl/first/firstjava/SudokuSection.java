@@ -17,7 +17,7 @@ public class SudokuSection {
 
     public boolean verify() {
         for (int i = 0; i < 9; i++) {
-            for (int j = i + 1; j < 9; j++) {
+            for (int j = 0; j < 9; j++) {
                 if (container[j].getFieldValue() == container[i].getFieldValue()) {
                     return false;
                 }

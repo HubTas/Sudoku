@@ -67,19 +67,17 @@ public class SudokuBoard {
     }
 
     private boolean checkBoard() {
+        boolean f1 = true;
+        boolean f2 = true;
         for (int i = 0; i < 9; i++) {
-            if (!getRow(i).verify() && getColumn(i).verify()) {
-                return false;
-            }
+            f1 = (getRow(i).verify() && getColumn(i).verify());
         }
         for (int i = 0;i < 9;i += 3) {
             for (int j = 0;j < 9;j += 3) {
-                if (!getBox(i, j).verify()) {
-                    return false;
-                }
+                f2 = getBox(i,j).verify();
             }
         }
-        return true;
+        return f1 && f2;
     }
 
     public boolean getCheck() {
@@ -109,8 +107,8 @@ public class SudokuBoard {
         SudokuField[] fields = new SudokuField[9];
         int z = 0;
         for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                fields[z] = board[x + i][y + j];
+            for (int j = 0; j < 9; j++) {
+                fields[z] = board[x * 3 + i][y * 3 + j];
                 z++;
             }
         }

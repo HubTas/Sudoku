@@ -83,56 +83,13 @@ class SudokuBoardTest {
             }
         }
 
-        //test getCheck i checkBoard
-        SudokuBoard test5 = new SudokuBoard(solver);
-        test5.solveGame();
-        assertTrue(test5.getCheck());
-        test5.setBoard(6, 7, 4);
-        test5.setBoard(6, 3, 4);
-        assertFalse(test5.getCheck());
+        //test fillRemaining
+//        SudokuBoard test5 = new SudokuBoard(solver);
+//        BacktrackingSudokuSolver.roll3x3(0,0, test5);
+//        BacktrackingSudokuSolver.roll3x3(3,3, test5);
+//        BacktrackingSudokuSolver.roll3x3(6,6, test5);
+//        boolean fillRemaining = BacktrackingSudokuSolver.fillRemaining(0,3,test5);
+//        assertTrue(fillRemaining);
 
-        SudokuField[] container = new SudokuField[9];
-        SudokuField testField = new SudokuField();
-        for (int i = 0; i < 9; i++) {
-            container[i] = new SudokuField();
-        }
-        for (int i = 0; i < 9; i++) {
-            container[i].setFieldValue(i+1);
-        }
-
-        SudokuBoard test6 = new SudokuBoard(solver);
-        //test getRow
-        assertFalse(test6.getRow(3).verify());
-        test6.setBoard(2,3,5);
-        test6.setBoard(6,3,5);
-        assertFalse(test6.getRow(3).verify());
-
-        SudokuBoard test7 = new SudokuBoard(solver);
-        //test getColumn
-        assertFalse(test7.getColumn(6).verify());
-
-        //test getBox
-        assertFalse(test7.getBox(0, 0).verify());
-
-        //test SudokuRow
-        SudokuRow row = new SudokuRow();
-        for(int i = 0; i < 9; i++) {
-            row.setValues(container);
-        }
-        assertTrue(row.verify());
-
-        //test SudokuBox
-        SudokuBox box = new SudokuBox();
-        for(int i = 0; i < 9; i++) {
-            box.setValues(container);
-        }
-        assertTrue(box.verify());
-
-        //test SudokuColumn
-        SudokuColumn column = new SudokuColumn();
-        for(int i = 0; i < 9; i++) {
-            column.setValues(container);
-        }
-        assertTrue(column.verify());
     }
 }
