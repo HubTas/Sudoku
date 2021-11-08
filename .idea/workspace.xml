@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26f8275a-045b-49db-9704-836a65531d20" name="Default Changelist" comment="&quot;Dodanie klas SudokuField,SudokuBox,SudokuRow,SudokuBox&quot;&#10;&quot;Poprawienie konstruktora SudokuBoard&quot;&#10;&quot;Dodanie interfejsu weryfikującego wartość pól&quot;" />
+    <list default="true" id="26f8275a-045b-49db-9704-836a65531d20" name="Default Changelist" comment="Ukończone zadanie 4 wraz z 100% pokryciem testami">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,6 +71,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
@@ -134,7 +137,7 @@
       <workItem from="1634833189145" duration="1812000" />
       <workItem from="1634845082819" duration="806000" />
       <workItem from="1635965031778" duration="1240000" />
-      <workItem from="1636291609499" duration="15826000" />
+      <workItem from="1636334349522" duration="63000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;Przeksztalcanie struktury projektu&quot;">
       <created>1634845564660</created>
