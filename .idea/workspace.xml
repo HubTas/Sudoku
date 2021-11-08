@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26f8275a-045b-49db-9704-836a65531d20" name="Default Changelist" comment="&quot;Dodanie klas SudokuField,SudokuBox,SudokuRow,SudokuBox&quot;&#10;&quot;Poprawienie konstruktora SudokuBoard&quot;&#10;&quot;Dodanie interfejsu weryfikującego wartość pól&quot;">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/first/firstjava/BacktrackingSudokuSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/first/firstjava/BacktrackingSudokuSolver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/first/firstjava/SudokuBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/first/firstjava/SudokuBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/first/firstjava/SudokuSection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/first/firstjava/SudokuSection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pl/first/firstjava/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/first/firstjava/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pl/first/firstjava/SudokuBoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/first/firstjava/SudokuBoardTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="26f8275a-045b-49db-9704-836a65531d20" name="Default Changelist" comment="&quot;Dodanie klas SudokuField,SudokuBox,SudokuRow,SudokuBox&quot;&#10;&quot;Poprawienie konstruktora SudokuBoard&quot;&#10;&quot;Dodanie interfejsu weryfikującego wartość pól&quot;" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
