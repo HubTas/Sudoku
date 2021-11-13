@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26f8275a-045b-49db-9704-836a65531d20" name="Default Changelist" comment="Ukończone zadanie 4 wraz z 100% pokryciem testami">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_07_11_2021_01_26__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_07_11_2021_01_26__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/first/firstjava/SudokuBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/first/firstjava/SudokuBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/first/firstjava/SudokuSection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/first/firstjava/SudokuSection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pl/first/firstjava/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/first/firstjava/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pl/first/firstjava/SudokuBoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/first/firstjava/SudokuBoardTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pl/first/firstjava/SudokuBoardTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pl/first/firstjava/SudokuBoardTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,8 +118,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SudokuBoardTest" />
         <item itemvalue="Application.App" />
+        <item itemvalue="JUnit.SudokuBoardTest" />
       </list>
     </recent_temporary>
   </component>
@@ -138,6 +144,7 @@
       <workItem from="1634845082819" duration="806000" />
       <workItem from="1635965031778" duration="1240000" />
       <workItem from="1636334349522" duration="63000" />
+      <workItem from="1636813311930" duration="487000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;Przeksztalcanie struktury projektu&quot;">
       <created>1634845564660</created>
