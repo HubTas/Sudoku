@@ -1,6 +1,6 @@
 package pl.first.firstjava;
 
-public class SudokuSection {
+public abstract class SudokuSection {
     private SudokuField[] container = new SudokuField[9];
 
     public SudokuSection() {
@@ -17,7 +17,7 @@ public class SudokuSection {
 
     public boolean verify() {
         for (int i = 0; i < 9; i++) {
-            for (int j = 0; j < 9; j++) {
+            for (int j = i + 1; j < 9; j++) {
                 if (container[j].getFieldValue() == container[i].getFieldValue()) {
                     return false;
                 }

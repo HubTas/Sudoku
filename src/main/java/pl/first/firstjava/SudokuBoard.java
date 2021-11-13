@@ -64,30 +64,31 @@ public class SudokuBoard {
 
     public void setBoard(int x, int y, int value) {
         board[x][y].setFieldValue(value);
+        checkBoard();
     }
 
     private boolean checkBoard() {
-        boolean f1 = true;
-        boolean f2 = true;
         for (int i = 0; i < 9; i++) {
-            f1 = (getRow(i).verify() && getColumn(i).verify());
+            if (!getRow(i).verify() && getColumn(i).verify()) {
+                return false;
+            }
         }
         for (int i = 0;i < 9;i += 3) {
             for (int j = 0;j < 9;j += 3) {
-                f2 = getBox(i,j).verify();
+                if (!getBox(i, j).verify()) {
+                    return false;
+                }
             }
         }
-        return f1 && f2;
-    }
-
-    public boolean getCheck() {
-        return checkBoard();
+        return true;
     }
 
     public SudokuRow getRow(int y) {
         SudokuRow row = new SudokuRow();
         SudokuField[] fields = new SudokuField[9];
-        System.arraycopy(board[y], 0, fields, 0, 9);
+        for (int i = 0;i < 9; i++) {
+            fields[i] = board[y][i];
+        }
         row.setValues(fields);
         return row;
     }
@@ -107,8 +108,8 @@ public class SudokuBoard {
         SudokuField[] fields = new SudokuField[9];
         int z = 0;
         for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 9; j++) {
-                fields[z] = board[x * 3 + i][y * 3 + j];
+            for (int j = 0; j < 3; j++) {
+                fields[z] = board[x + i][y + j];
                 z++;
             }
         }
