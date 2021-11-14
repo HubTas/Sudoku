@@ -1,24 +1,19 @@
 package pl.first.firstjava;
 
+import java.util.List;
+
 public abstract class SudokuSection {
-    private SudokuField[] container = new SudokuField[9];
 
-    public SudokuSection() {
-        for (int i = 0; i < 9; i++) {
-            container[i] = new SudokuField();
-        }
-    }
+    private List<SudokuField> fields;
 
-    public void setValues(SudokuField[] values) {
-        for (int i = 0; i < 9; i++) {
-            container[i].setFieldValue(values[i].getFieldValue());
-        }
+    public SudokuSection(List<SudokuField> fields) {
+        this.fields = fields;
     }
 
     public boolean verify() {
         for (int i = 0; i < 9; i++) {
             for (int j = i + 1; j < 9; j++) {
-                if (container[j].getFieldValue() == container[i].getFieldValue()) {
+                if (fields.get(i).getFieldValue() == fields.get(j).getFieldValue()) {
                     return false;
                 }
             }

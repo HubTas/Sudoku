@@ -1,4 +1,10 @@
 package pl.first.firstjava;
 
-public class SudokuRow extends SudokuSection{
+import java.util.List;
+
+public class SudokuRow extends SudokuSection {
+
+    public SudokuRow(final List<SudokuField> fields) {
+        super(fields);
+    }
 }

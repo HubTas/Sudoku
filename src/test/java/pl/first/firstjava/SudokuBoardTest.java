@@ -2,7 +2,7 @@ package pl.first.firstjava;
 
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
-
+import java.util.Arrays;
 /**
  *
  * @author Jakub Mielczarek | Huber Tasarz
@@ -84,9 +84,9 @@ class SudokuBoardTest {
         }
 
         SudokuField[] container = new SudokuField[9];
-        SudokuField testField = new SudokuField();
+        SudokuField testField = new SudokuField(0);
         for (int i = 0; i < 9; i++) {
-            container[i] = new SudokuField();
+            container[i] = new SudokuField(0);
         }
         for (int i = 0; i < 9; i++) {
             container[i].setFieldValue(i+1);
@@ -104,27 +104,9 @@ class SudokuBoardTest {
         assertFalse(test7.getColumn(6).verify());
 
         //test getBox
-        assertFalse(test7.getBox(0).verify());
+        test7.setBoard(0,0,5);
+        test7.setBoard(0,1,5);
+        assertFalse(test7.getBox(0,0).verify());
 
-        //test SudokuRow
-        SudokuRow row = new SudokuRow();
-        for(int i = 0; i < 9; i++) {
-            row.setValues(container);
-        }
-        assertTrue(row.verify());
-
-        //test SudokuBox
-        SudokuBox box = new SudokuBox();
-        for(int i = 0; i < 9; i++) {
-            box.setValues(container);
-        }
-        assertTrue(box.verify());
-
-        //test SudokuColumn
-        SudokuColumn column = new SudokuColumn();
-        for(int i = 0; i < 9; i++) {
-            column.setValues(container);
-        }
-        assertTrue(column.verify());
     }
 }
