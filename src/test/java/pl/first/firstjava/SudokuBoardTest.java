@@ -104,7 +104,7 @@ class SudokuBoardTest {
         assertFalse(test7.getColumn(6).verify());
 
         //test getBox
-        assertFalse(test7.getBox(0, 0).verify());
+        assertFalse(test7.getBox(0).verify());
 
         //test SudokuRow
         SudokuRow row = new SudokuRow();

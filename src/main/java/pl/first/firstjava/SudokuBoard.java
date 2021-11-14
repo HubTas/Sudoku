@@ -1,9 +1,14 @@
 package pl.first.firstjava;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class SudokuBoard {
     private SudokuSolver solver;
     private SudokuField[][] board = new SudokuField[9][9];
-
+    private List<SudokuRow>rows = Arrays.asList(new SudokuRow[9]);
+    private List<SudokuBox>boxes = Arrays.asList(new SudokuBox[9]);
+    private List<SudokuColumn>columns = Arrays.asList(new SudokuColumn[9]);
     public SudokuBoard(SudokuSolver solver) {
         this.solver = solver;
         for (int i = 0; i < 9; i++) {
@@ -11,6 +16,30 @@ public class SudokuBoard {
                 this.board[i][j] = new SudokuField();
             }
         }
+        for (int i = 0; i < 9; i++){
+            rows.set(i, new SudokuRow());
+            columns.set(i, new SudokuColumn());
+            boxes.set(i, new SudokuBox());
+        }
+        SudokuField[] tmp_tab = new SudokuField[9];
+        SudokuColumn column = new SudokuColumn();
+        SudokuRow row = new SudokuRow();
+        SudokuBox box = new SudokuBox();
+        for (int j = 0; j < 9; j++){
+            for (int i = 0; i < 9; i++){
+                tmp_tab[i] = board[i][j];
+            }
+            column.setValues(tmp_tab);
+            columns.set(j, column);
+        }
+        for (int i = 0; i < 9; i++){
+            for (int j = 0; j < 9; j++){
+                tmp_tab[j] = board[i][j];
+            }
+            row.setValues(tmp_tab);
+            rows.set(i, row);
+        }
+
     }
 
     public void solveGame() {
@@ -69,52 +98,27 @@ public class SudokuBoard {
 
     private boolean checkBoard() {
         for (int i = 0; i < 9; i++) {
-            if (!getRow(i).verify() && getColumn(i).verify()) {
+            if (!(getRow(i).verify() && getColumn(i).verify())) {
                 return false;
             }
         }
-        for (int i = 0;i < 9;i += 3) {
-            for (int j = 0;j < 9;j += 3) {
-                if (!getBox(i, j).verify()) {
-                    return false;
-                }
+        for (int i = 0;i < 9; i++) {
+            if (!getBox(i).verify()) {
+                return false;
             }
         }
         return true;
     }
 
-    public SudokuRow getRow(int y) {
-        SudokuRow row = new SudokuRow();
-        SudokuField[] fields = new SudokuField[9];
-        for (int i = 0;i < 9; i++) {
-            fields[i] = board[y][i];
-        }
-        row.setValues(fields);
-        return row;
+    public SudokuRow getRow(int x){
+        return rows.get(x);
     }
-
     public SudokuColumn getColumn(int x) {
-        SudokuColumn column = new SudokuColumn();
-        SudokuField[] fields = new SudokuField[9];
-        for (int i = 0;i < 9; i++) {
-            fields[i] = board[i][x];
-        }
-        column.setValues(fields);
-        return column;
+       return columns.get(x);
     }
 
-    public SudokuBox getBox(int x, int y) {
-        SudokuBox box = new SudokuBox();
-        SudokuField[] fields = new SudokuField[9];
-        int z = 0;
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                fields[z] = board[x + i][y + j];
-                z++;
-            }
-        }
-        box.setValues(fields);
-        return box;
+
+    public SudokuBox getBox(int x) {
+       return boxes.get(x);
     }
 }
-
