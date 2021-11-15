@@ -54,7 +54,29 @@
             </plugin>
         </plugins>
     </reporting>
-    
+
+    <developers>
+        <developer>
+            <id>236602</id>
+            <name>Jakub Mielczarek</name>
+            <email>236602@edu.p.lodz.pl</email>
+        </developer>
+        <developer>
+            <id>236674</id>
+            <name>Hubert Tasarz</name>
+            <email>236674@edu.p.lodz.pl</email>
+        </developer>
+    </developers>
+    <description>Projekt grupy laboratoryjnej an_pn_1200_03</description>
+
+    <licenses>
+        <license>
+            <name>Simplified BSD License</name>
+            <url>https://opensource.org/licenses/bsd-license.php</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
     <build>
         <plugins>
             <plugin>

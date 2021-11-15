@@ -1,13 +1,16 @@
 package pl.first.firstjava;
 
+import java.util.Random;
+
 public class BacktrackingSudokuSolver  implements SudokuSolver {
     //generowanie losowe kwadratu
     private void roll3x3(int startx,int starty, final SudokuBoard board) {
         int x;
+        Random rand = new Random();
         for (int i = startx;i < startx + 3;i++) {
             for (int j = starty;j < starty + 3;j++) {
                 do {
-                    x = (int) (Math.random() * 9 + 1);
+                    x = (rand.nextInt(9) + 1);
                 } while (!board.isSafe(i,j,x));
                 board.setBoard(i,j,x);
             }

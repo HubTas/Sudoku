@@ -3,6 +3,8 @@ package pl.first.firstjava;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 import java.util.Arrays;
+import java.util.List;
+
 /**
  *
  * @author Jakub Mielczarek | Huber Tasarz
@@ -83,30 +85,111 @@ class SudokuBoardTest {
             }
         }
 
-        SudokuField[] container = new SudokuField[9];
-        SudokuField testField = new SudokuField(0);
-        for (int i = 0; i < 9; i++) {
-            container[i] = new SudokuField(0);
-        }
-        for (int i = 0; i < 9; i++) {
-            container[i].setFieldValue(i+1);
-        }
+        SudokuBoard test5 = new SudokuBoard(solver);
+        test5.solveGame();
+        //test getColumn
+        assertTrue(test5.getColumn(3).verify());
+        test5.setBoard(2,3,5);
+        test5.setBoard(6,3,5);
+        assertFalse(test5.getColumn(3).verify());
 
         SudokuBoard test6 = new SudokuBoard(solver);
+        test6.solveGame();
         //test getRow
-        assertFalse(test6.getRow(3).verify());
-        test6.setBoard(2,3,5);
-        test6.setBoard(6,3,5);
-        assertFalse(test6.getRow(3).verify());
-
-        SudokuBoard test7 = new SudokuBoard(solver);
-        //test getColumn
-        assertFalse(test7.getColumn(6).verify());
+        assertTrue(test6.getRow(6).verify());
 
         //test getBox
-        test7.setBoard(0,0,5);
-        test7.setBoard(0,1,5);
-        assertFalse(test7.getBox(0,0).verify());
+        assertTrue(test6.getBox(0,0).verify());
+        test.setBoard(0,0,5);
+        test6.setBoard(1,1,5);
+        assertFalse(test6.getBox(0,0).verify());
 
+        SudokuBoard test7 = new SudokuBoard(solver);
+        test5.setBoard(0,0,4);
+        test5.setBoard(1,0,1);
+        test5.setBoard(2,0,5);
+        test5.setBoard(3,0,2);
+        test5.setBoard(4,0,3);
+        test5.setBoard(5,0,6);
+        test5.setBoard(6,0,7);
+        test5.setBoard(7,0,9);
+        test5.setBoard(8,0,8);
+        test5.setBoard(0,1,8);
+        test5.setBoard(1,1,2);
+        test5.setBoard(2,1,9);
+        test5.setBoard(3,1,1);
+        test5.setBoard(4,1,4);
+        test5.setBoard(5,1,7);
+        test5.setBoard(6,1,5);
+        test5.setBoard(7,1,3);
+        test5.setBoard(8,1,6);
+        test5.setBoard(0,2,6);
+        test5.setBoard(1,2,3);
+        test5.setBoard(2,2,7);
+        test5.setBoard(3,2,8);
+        test5.setBoard(4,2,5);
+        test5.setBoard(5,2,9);
+        test5.setBoard(6,2,1);
+        test5.setBoard(7,2,4);
+        test5.setBoard(8,2,2);
+        test5.setBoard(0,3,2);
+        test5.setBoard(1,3,5);
+        test5.setBoard(2,3,4);
+        test5.setBoard(3,3,6);
+        test5.setBoard(4,3,1);
+        test5.setBoard(5,3,3);
+        test5.setBoard(6,3,8);
+        test5.setBoard(7,3,7);
+        test5.setBoard(8,3,9);
+        test5.setBoard(0,4,7);
+        test5.setBoard(1,4,9);
+        test5.setBoard(2,4,1);
+        test5.setBoard(3,4,4);
+        test5.setBoard(4,4,8);
+        test5.setBoard(5,4,2);
+        test5.setBoard(6,4,6);
+        test5.setBoard(7,4,5);
+        test5.setBoard(8,4,3);
+        test5.setBoard(0,5,3);
+        test5.setBoard(1,5,6);
+        test5.setBoard(2,5,8);
+        test5.setBoard(3,5,7);
+        test5.setBoard(4,5,9);
+        test5.setBoard(5,5,5);
+        test5.setBoard(6,5,4);
+        test5.setBoard(7,5,2);
+        test5.setBoard(8,5,1);
+        test5.setBoard(0,6,1);
+        test5.setBoard(1,6,8);
+        test5.setBoard(2,6,3);
+        test5.setBoard(3,6,5);
+        test5.setBoard(4,6,2);
+        test5.setBoard(5,6,4);
+        test5.setBoard(6,6,9);
+        test5.setBoard(7,6,6);
+        test5.setBoard(8,6,7);
+        test5.setBoard(0,7,9);
+        test5.setBoard(1,7,4);
+        test5.setBoard(2,7,6);
+        test5.setBoard(3,7,3);
+        test5.setBoard(4,7,7);
+        test5.setBoard(5,7,1);
+        test5.setBoard(6,7,2);
+        test5.setBoard(7,7,8);
+        test5.setBoard(8,7,5);
+        test5.setBoard(0,8,5);
+        test5.setBoard(1,8,7);
+        test5.setBoard(2,8,2);
+        test5.setBoard(3,8,9);
+        test5.setBoard(4,8,6);
+        test5.setBoard(5,8,8);
+        test5.setBoard(6,8,3);
+        test5.setBoard(7,8,1);
+        test5.setBoard(8,8,4);
+        assertTrue(test6.getRow(6).verify());
+
+        test5.setBoard(6,8,5);
+        test5.setBoard(8,7,3);
+        assertTrue(test6.getBox(2,2).verify());
     }
 }
