@@ -10,7 +10,7 @@ public class BacktrackingSudokuSolver  implements SudokuSolver {
         for (int i = startx;i < startx + 3;i++) {
             for (int j = starty;j < starty + 3;j++) {
                 do {
-                    x = (rand.nextInt(9) + 1);
+                    x = rand.nextInt(9) + 1;
                 } while (!board.isSafe(i,j,x));
                 board.setBoard(i,j,x);
             }
