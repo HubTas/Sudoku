@@ -10,6 +10,7 @@ public class App {
             SudokuSolver solver = new BacktrackingSudokuSolver();
             SudokuBoard test = new SudokuBoard(solver);
             test.solveGame();
-            test.printout();
+            System.out.println(test.toString());
+            // test.printout();
     }
 }

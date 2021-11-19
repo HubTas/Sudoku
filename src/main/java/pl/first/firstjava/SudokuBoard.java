@@ -2,10 +2,35 @@ package pl.first.firstjava;
 
 import java.util.Arrays;
 import java.util.List;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+
 
 public class SudokuBoard {
     private SudokuSolver solver;
     private SudokuField[][] board = new SudokuField[9][9];
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+
+        SudokuBoard board1 = (SudokuBoard) o;
+
+        return new EqualsBuilder().append(solver, board1.solver)
+                .append(board, board1.board).isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(solver).append(board).toHashCode();
+    }
 
     public SudokuBoard(SudokuSolver solver) {
         this.solver = solver;
@@ -45,21 +70,21 @@ public class SudokuBoard {
         return true;
     }
 
-    public void printout() {
-        System.out.println("┌—————┬—————┬—————┬—————┬—————┬—————┬—————┬—————┬—————┐");
-        for (int i = 0;i < 9;i++) {
-            System.out.print("│");
-            for (int j = 0;j < 9;j++) {
-                System.out.print("  " + board[i][j].getFieldValue() + "  " + "│");
-            }
-            System.out.println();
-            if (i < 8) {
-                System.out.println("├—————┼—————┼—————┼—————┼—————┼—————┼—————┼—————┼—————┤");
-            } else {
-                System.out.println("└—————┴—————┴—————┴—————┴—————┴—————┴—————┴—————┴—————┘");
-            }
-        }
-    }
+    //    public void printout() {
+    //        System.out.println("┌—————┬—————┬—————┬—————┬—————┬—————┬—————┬—————┬—————┐");
+    //        for (int i = 0;i < 9;i++) {
+    //            System.out.print("│");
+    //            for (int j = 0;j < 9;j++) {
+    //                System.out.print("  " + board[i][j].getFieldValue() + "  " + "│");
+    //            }
+    //            System.out.println();
+    //            if (i < 8) {
+    //                System.out.println("├—————┼—————┼—————┼—————┼—————┼—————┼—————┼—————┼—————┤");
+    //            } else {
+    //                System.out.println("└—————┴—————┴—————┴—————┴—————┴—————┴—————┴—————┴—————┘");
+    //            }
+    //        }
+    //    }
 
     public int getBoard(int x, int y) {
         return board[x][y].getFieldValue();
@@ -113,4 +138,16 @@ public class SudokuBoard {
         return new SudokuBox(fields);
     }
 
+    @Override
+    public String toString() {
+        ToStringBuilder string = new ToStringBuilder(this);
+        string.append(System.lineSeparator());
+            for (int i = 0; i < 9; i++) {
+                for (int j = 0; j < 9; j++) {
+                    string.append(board[i][j].getFieldValue());
+                }
+                string.append(System.lineSeparator());
+            }
+        return string.toString();
+    }
 }
