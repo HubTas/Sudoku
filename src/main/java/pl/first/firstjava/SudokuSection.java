@@ -1,6 +1,8 @@
 package pl.first.firstjava;
 
 import java.util.List;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 public abstract class SudokuSection {
 
@@ -19,5 +21,32 @@ public abstract class SudokuSection {
             }
         }
         return true;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+
+        SudokuSection that = (SudokuSection) o;
+
+        return new EqualsBuilder().append(fields, that.fields).isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(fields).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return "SudokuSection{"
+                + "fields=" + fields
+                + '}';
     }
 }
