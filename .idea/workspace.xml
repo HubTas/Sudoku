@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="26f8275a-045b-49db-9704-836a65531d20" name="Default Changelist" comment="Walka z zadaniem 5">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projekt.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Projekt.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/first/firstjava/SudokuSection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/first/firstjava/SudokuSection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pl/first/firstjava/SudokuBoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/first/firstjava/SudokuBoardTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/first/firstjava/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/first/firstjava/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/first/firstjava/SudokuBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/first/firstjava/SudokuBoard.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

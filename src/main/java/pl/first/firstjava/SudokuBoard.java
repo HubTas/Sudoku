@@ -70,22 +70,6 @@ public class SudokuBoard {
         return true;
     }
 
-    //    public void printout() {
-    //        System.out.println("┌—————┬—————┬—————┬—————┬—————┬—————┬—————┬—————┬—————┐");
-    //        for (int i = 0;i < 9;i++) {
-    //            System.out.print("│");
-    //            for (int j = 0;j < 9;j++) {
-    //                System.out.print("  " + board[i][j].getFieldValue() + "  " + "│");
-    //            }
-    //            System.out.println();
-    //            if (i < 8) {
-    //                System.out.println("├—————┼—————┼—————┼—————┼—————┼—————┼—————┼—————┼—————┤");
-    //            } else {
-    //                System.out.println("└—————┴—————┴—————┴—————┴—————┴—————┴—————┴—————┴—————┘");
-    //            }
-    //        }
-    //    }
-
     public int getBoard(int x, int y) {
         return board[x][y].getFieldValue();
     }
@@ -96,19 +80,25 @@ public class SudokuBoard {
     }
 
     private boolean checkBoard() {
+        boolean flag = true;
         for (int i = 0;i < 3;i++) {
             for (int j = 0;j < 3;j++) {
                 if (!getBox(i, j).verify()) {
-                    return false;
+                    flag = false;
                 }
             }
         }
         for (int i = 0; i < 9; i++) {
-            if (!getRow(i).verify() || !getColumn(i).verify()) {
-                return false;
+            if (!getRow(i).verify()) {
+                flag = false;
             }
         }
-        return true;
+        for (int i = 0; i < 9; i++) {
+            if (!getColumn(i).verify()) {
+                flag = false;
+            }
+        }
+        return flag;
     }
 
     public SudokuRow getRow(int y) {
