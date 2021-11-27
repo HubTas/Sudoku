@@ -11,6 +11,5 @@ public class App {
             SudokuBoard test = new SudokuBoard(solver);
             test.solveGame();
             System.out.println(test.toString());
-            //test.printout();
     }
 }

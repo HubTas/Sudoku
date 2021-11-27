@@ -13,18 +13,7 @@ public class SudokuBoard {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-
-        SudokuBoard board1 = (SudokuBoard) o;
-
-        return new EqualsBuilder().append(solver, board1.solver)
-                .append(board, board1.board).isEquals();
+        return new EqualsBuilder().append(board, ((SudokuBoard) o).board).isEquals();
     }
 
     @Override

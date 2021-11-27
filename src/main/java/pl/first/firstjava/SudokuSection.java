@@ -3,6 +3,7 @@ package pl.first.firstjava;
 import java.util.List;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
 
 public abstract class SudokuSection {
 
@@ -25,17 +26,7 @@ public abstract class SudokuSection {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-
-        SudokuSection that = (SudokuSection) o;
-
-        return new EqualsBuilder().append(fields, that.fields).isEquals();
+        return new EqualsBuilder().append(fields, ((SudokuSection) o).fields).isEquals();
     }
 
     @Override
@@ -45,8 +36,6 @@ public abstract class SudokuSection {
 
     @Override
     public String toString() {
-        return "SudokuSection{"
-                + "fields=" + fields
-                + '}';
+        return new ToStringBuilder(this).append("fields", fields).toString();
     }
 }

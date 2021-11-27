@@ -2,23 +2,14 @@ package pl.first.firstjava;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
 
 public class SudokuField {
     private int value;
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-
-        SudokuField that = (SudokuField) o;
-
-        return new EqualsBuilder().append(value, that.value).isEquals();
+        return new EqualsBuilder().append(value, ((SudokuField) o).value).isEquals();
     }
 
     @Override
@@ -40,8 +31,6 @@ public class SudokuField {
 
     @Override
     public String toString() {
-        return "SudokuField{"
-                + "value=" + value
-                + '}';
+        return new ToStringBuilder(this).append("value", value).toString();
     }
 }
