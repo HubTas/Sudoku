@@ -5,14 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26f8275a-045b-49db-9704-836a65531d20" name="Default Changelist" comment="Zadanie 6">
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/first/firstjava/Dao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/first/firstjava/FileSudokuBoardDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/first/firstjava/SudokuBoardDaoFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pl/first/firstjava/FileSudokuBoardDaoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pl/first/firstjava/SudokuBoardDaoFactoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Projekt.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Projekt.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/first/firstjava/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/first/firstjava/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/first/firstjava/BacktrackingSudokuSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/first/firstjava/BacktrackingSudokuSolver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/first/firstjava/SudokuBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/first/firstjava/SudokuBoard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/first/firstjava/SudokuField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/first/firstjava/SudokuField.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/first/firstjava/SudokuSection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/first/firstjava/SudokuSection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pl/first/firstjava/SudokuBoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/first/firstjava/SudokuBoardTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +72,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../javafx-sdk-17.0.1/lib" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -89,7 +91,7 @@
       <recent name="pl.first.firstjava" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.App">
+  <component name="RunManager" selected="JUnit.FileSudokuBoardDaoTest">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="pl.first.firstjava.App" />
       <module name="Projekt" />
@@ -100,6 +102,36 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileSudokuBoardDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Projekt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pl.first.firstjava.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pl.first.firstjava" />
+      <option name="MAIN_CLASS_NAME" value="pl.first.firstjava.FileSudokuBoardDaoTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SudokuBoardDaoFactoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Projekt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pl.first.firstjava.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pl.first.firstjava" />
+      <option name="MAIN_CLASS_NAME" value="pl.first.firstjava.SudokuBoardDaoFactoryTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -122,11 +154,15 @@
     <list>
       <item itemvalue="Application.App" />
       <item itemvalue="JUnit.SudokuBoardTest" />
+      <item itemvalue="JUnit.SudokuBoardDaoFactoryTest" />
+      <item itemvalue="JUnit.FileSudokuBoardDaoTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.App" />
+        <item itemvalue="JUnit.FileSudokuBoardDaoTest" />
+        <item itemvalue="JUnit.SudokuBoardDaoFactoryTest" />
         <item itemvalue="JUnit.SudokuBoardTest" />
+        <item itemvalue="Application.App" />
       </list>
     </recent_temporary>
   </component>
@@ -164,6 +200,7 @@
       <workItem from="1637516184112" duration="1634000" />
       <workItem from="1637518280904" duration="2117000" />
       <workItem from="1638003980173" duration="5148000" />
+      <workItem from="1638021238207" duration="976000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;Przeksztalcanie struktury projektu&quot;">
       <created>1634845564660</created>
@@ -248,5 +285,16 @@
     <MESSAGE value="Zadanie 5" />
     <MESSAGE value="Zadanie 6" />
     <option name="LAST_COMMIT_MESSAGE" value="Zadanie 6" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/pl/first/firstjava/SudokuBoardDaoFactoryTest.java</url>
+          <line>10</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -1,10 +1,11 @@
 package pl.first.firstjava;
 
+import java.io.Serializable;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-public class BacktrackingSudokuSolver  implements SudokuSolver {
+public class BacktrackingSudokuSolver  implements SudokuSolver, Serializable {
     //generowanie losowe kwadratu
     private void roll3x3(int startx,int starty, final SudokuBoard board) {
         int x;
