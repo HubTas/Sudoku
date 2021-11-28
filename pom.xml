@@ -171,6 +171,7 @@
             <version>5.7.2</version>
             <scope>test</scope>
         </dependency>
+        <!--//Usage of Apache commons-lang3 library, basing on license http://www.apache.org/licenses/LICENSE-2.0. Link to documentation:https://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/builder/-->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
@@ -182,13 +183,20 @@
             <version>5.7.2</version>
             <scope>test</scope>
         </dependency>
+        <!--- Usage of JavaFX library, basing on open-source library. Link to home site of JavaFX: https://openjfx.io/-->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-graphics</artifactId>
+            <version>17.0.0.1</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
     
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-<!--        <maven.compiler.source>14</maven.compiler.source>
-        <maven.compiler.target>14</maven.compiler.target>-->
+        <maven.compiler.source>14</maven.compiler.source>
+        <maven.compiler.target>14</maven.compiler.target>
         <maven.compiler.release>17</maven.compiler.release>
     </properties>
 </project>
