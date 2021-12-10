@@ -5,14 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26f8275a-045b-49db-9704-836a65531d20" name="Default Changelist" comment="Ukończone zadanie 4 z poprawkami">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/View/src/main/resources/board.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/View/src/main/resources/com/example/view/board.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/View/src/main/resources/com/example/view/sudoku_board.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/View/src/main/resources/sudoku_board.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/main/java/pl/first/firstjava/SudokuBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/first/firstjava/SudokuBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/main/java/pl/first/firstjava/SudokuBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/first/firstjava/SudokuBox.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/main/java/pl/first/firstjava/SudokuColumn.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/first/firstjava/SudokuColumn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/main/java/pl/first/firstjava/SudokuField.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/first/firstjava/SudokuField.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/main/java/pl/first/firstjava/SudokuRow.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/first/firstjava/SudokuRow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/main/java/pl/first/firstjava/SudokuSection.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/first/firstjava/SudokuSection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/main/java/com/example/view/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/java/com/example/view/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/main/java/com/example/view/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/java/com/example/view/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/main/resources/com/example/view/hello-view.fxml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +68,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="jdk.selected.JAVA_MODULE" value="17 (2)" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/View/src/main/resources" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -81,10 +81,15 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\PC\Desktop\kompo\an_pn_1200_03\View\src\main\resources" />
+      <recent name="C:\Users\PC\Desktop\kompo\an_pn_1200_03\View\src\main\java" />
       <recent name="C:\Users\PC\Desktop\kompo\an_pn_1200_03" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\PC\Desktop\kompo\an_pn_1200_03\View\src\main\resources\com\example\view" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="pl.first.firstjava" />
@@ -118,6 +123,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="HelloApplication (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="HelloApplication" />
+      <module name="View" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.view.HelloApplication" />
       <module name="View" />
@@ -146,35 +158,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SudokuBoardDaoFactoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Projekt" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pl.first.firstjava.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="pl.first.firstjava" />
-      <option name="MAIN_CLASS_NAME" value="pl.first.firstjava.SudokuBoardDaoFactoryTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.App" />
       <item itemvalue="Application.App (1)" />
       <item itemvalue="Application.HelloApplication" />
-      <item itemvalue="JUnit.SudokuBoardDaoFactoryTest" />
       <item itemvalue="JUnit.FileSudokuBoardDaoTest" />
+      <item itemvalue="Application.HelloApplication (1)" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.HelloApplication" />
+        <item itemvalue="Application.HelloApplication (1)" />
         <item itemvalue="Application.App (1)" />
         <item itemvalue="Application.App" />
         <item itemvalue="JUnit.FileSudokuBoardDaoTest" />
-        <item itemvalue="JUnit.SudokuBoardDaoFactoryTest" />
       </list>
     </recent_temporary>
   </component>
