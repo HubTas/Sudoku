@@ -3,6 +3,8 @@ package pl.first.firstjava;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 import static java.lang.Character.UNASSIGNED;
+
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -148,5 +150,77 @@ class SudokuBoardTest {
         SudokuBoard instance2 = new SudokuBoard(solver2);
         assertNotEquals(instance.hashCode(), instance2.hashCode());
         assertNotEquals(column.hashCode(), column2.hashCode());
+    }
+
+    @Test
+    public void getSudokuFieldListTest() {
+        SudokuRow sudokuRow = new SudokuRow(Arrays.asList(
+        new SudokuField(1),
+        new SudokuField(2),
+        new SudokuField(3),
+        new SudokuField(4),
+        new SudokuField(5),
+        new SudokuField(6),
+        new SudokuField(7),
+        new SudokuField(8),
+        new SudokuField(9)));
+
+        SudokuField sudokuField = new SudokuField(3);
+        List<SudokuField> fields = sudokuRow.getSudokuFieldList();
+        fields.set(0, sudokuField);
+    }
+
+    @Test
+    public void rowCloneTest() throws CloneNotSupportedException {
+        SudokuRow sudokuRow = new SudokuRow(Arrays.asList(
+                new SudokuField(1),
+                new SudokuField(2),
+                new SudokuField(3),
+                new SudokuField(4),
+                new SudokuField(5),
+                new SudokuField(6),
+                new SudokuField(7),
+                new SudokuField(8),
+                new SudokuField(9)));
+        List<SudokuField> fields = sudokuRow.getSudokuFieldList();
+        SudokuRow row1 = new SudokuRow(fields);
+        SudokuRow row2 = (SudokuRow) row1.clone();
+        assertTrue(sudokuRow.equals(row1) && sudokuRow.equals(row2));
+    }
+
+    @Test
+    public void columnCloneTest() throws CloneNotSupportedException {
+        SudokuColumn sudokuColumn = new SudokuColumn(Arrays.asList(
+                new SudokuField(1),
+                new SudokuField(2),
+                new SudokuField(3),
+                new SudokuField(4),
+                new SudokuField(5),
+                new SudokuField(6),
+                new SudokuField(7),
+                new SudokuField(8),
+                new SudokuField(9)));
+        List<SudokuField> fields = sudokuColumn.getSudokuFieldList();
+        SudokuColumn column1 = new SudokuColumn(fields);
+        SudokuColumn column2 = (SudokuColumn) column1.clone();
+        assertTrue(sudokuColumn.equals(column1) && sudokuColumn.equals(column2));
+    }
+
+    @Test
+    public void boxCloneTest() throws CloneNotSupportedException {
+        SudokuBox sudokuBox = new SudokuBox(Arrays.asList(
+                new SudokuField(1),
+                new SudokuField(2),
+                new SudokuField(3),
+                new SudokuField(4),
+                new SudokuField(5),
+                new SudokuField(6),
+                new SudokuField(7),
+                new SudokuField(8),
+                new SudokuField(9)));
+        List<SudokuField> fields = sudokuBox.getSudokuFieldList();
+        SudokuBox box1 = new SudokuBox(fields);
+        SudokuBox box2 = (SudokuBox) box1.clone();
+        assertTrue(sudokuBox.equals(box1) && sudokuBox.equals(box2));
     }
 }
