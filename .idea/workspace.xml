@@ -4,13 +4,56 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26f8275a-045b-49db-9704-836a65531d20" name="Default Changelist" comment="&quot;Dodanie klas SudokuField,SudokuBox,SudokuRow,SudokuBox&quot;&#10;&quot;Poprawienie konstruktora SudokuBoard&quot;&#10;&quot;Dodanie interfejsu weryfikującego wartość pól&quot;">
+    <list default="true" id="26f8275a-045b-49db-9704-836a65531d20" name="Default Changelist" comment="Poprawki">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_7_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_7_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_7_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_7_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_17_0_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_17_ea_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_win_17_0_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_win_17_ea_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_17_ea_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_win_17_ea_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_17_ea_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_win_17_ea_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_17_0_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_17_ea_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_win_17_0_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_win_17_ea_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Model/FirstJava.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Model/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/View/View.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/View/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/View/src/main/java/com/example/view/HelloApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/View/src/main/java/com/example/view/HelloController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/View/src/main/java/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/View/src/main/resources/com/example/view/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_12_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_12_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/first/firstjava/BacktrackingSudokuSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/first/firstjava/BacktrackingSudokuSolver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/first/firstjava/SudokuBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/first/firstjava/SudokuBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/first/firstjava/SudokuSection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/first/firstjava/SudokuSection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pl/first/firstjava/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/first/firstjava/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pl/first/firstjava/SudokuBoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/first/firstjava/SudokuBoardTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projekt.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Projekt.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/first/firstjava/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/first/firstjava/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/first/firstjava/BacktrackingSudokuSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/first/firstjava/BacktrackingSudokuSolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/first/firstjava/Dao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/first/firstjava/Dao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/first/firstjava/FileSudokuBoardDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/first/firstjava/FileSudokuBoardDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/first/firstjava/SudokuBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/first/firstjava/SudokuBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/first/firstjava/SudokuBoardDaoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/first/firstjava/SudokuBoardDaoFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/first/firstjava/SudokuBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/first/firstjava/SudokuBox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/first/firstjava/SudokuColumn.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/first/firstjava/SudokuColumn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/first/firstjava/SudokuField.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/first/firstjava/SudokuField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/first/firstjava/SudokuRow.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/first/firstjava/SudokuRow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/first/firstjava/SudokuSection.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/first/firstjava/SudokuSection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/first/firstjava/SudokuSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/first/firstjava/SudokuSolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pl/first/firstjava/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/test/java/pl/first/firstjava/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pl/first/firstjava/FileSudokuBoardDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/test/java/pl/first/firstjava/FileSudokuBoardDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pl/first/firstjava/SudokuBoardDaoFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/test/java/pl/first/firstjava/SudokuBoardDaoFactoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pl/first/firstjava/SudokuBoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/test/java/pl/first/firstjava/SudokuBoardTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,11 +83,6 @@
         </map>
       </branch-storage>
     </favorite-branches>
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="Test" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
@@ -56,9 +94,6 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/test/java/pl/first/firstjava/SudokuBoardTest.java" root0="FORCE_HIGHLIGHTING" />
-  </component>
   <component name="ProjectId" id="1rhv1gAlZxYjSXxTtrILCdkM99E" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -68,21 +103,27 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="jdk.selected.JAVA_MODULE" value="17 (2)" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.33448276" />
+    <property name="settings.editor.selected.configurable" value="preferences.JavaFX" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\PC\Desktop\kompo\an_pn_1200_03" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
@@ -90,10 +131,10 @@
       <recent name="pl.first.firstjava" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.App">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.HelloApplication">
+    <configuration name="App (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="pl.first.firstjava.App" />
-      <module name="Projekt" />
+      <module name="FirstJava" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="pl.first.firstjava.*" />
@@ -104,7 +145,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SudokuBoardTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pl.first.firstjava.App" />
+      <module name="Projekt" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Users\PC\Desktop\javafx-sdk-17.0.1\lib&quot; --add-modules javafx.controls,javafx.fxml" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pl.first.firstjava.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.view.HelloApplication" />
+      <module name="View" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.view.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileSudokuBoardDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Projekt" />
       <extension name="coverage">
         <pattern>
@@ -113,18 +181,41 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="pl.first.firstjava" />
-      <option name="MAIN_CLASS_NAME" value="pl.first.firstjava.SudokuBoardTest" />
+      <option name="MAIN_CLASS_NAME" value="pl.first.firstjava.FileSudokuBoardDaoTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SudokuBoardDaoFactoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Projekt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pl.first.firstjava.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pl.first.firstjava" />
+      <option name="MAIN_CLASS_NAME" value="pl.first.firstjava.SudokuBoardDaoFactoryTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.App" />
+      <item itemvalue="JUnit.SudokuBoardDaoFactoryTest" />
+      <item itemvalue="JUnit.FileSudokuBoardDaoTest" />
+      <item itemvalue="Application.App (1)" />
+      <item itemvalue="Application.HelloApplication" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.HelloApplication" />
+        <item itemvalue="Application.App (1)" />
         <item itemvalue="Application.App" />
-        <item itemvalue="JUnit.SudokuBoardTest" />
-        <item itemvalue="JUnit.SudokuBoardTest" />
-        <item itemvalue="Application.App" />
+        <item itemvalue="JUnit.FileSudokuBoardDaoTest" />
+        <item itemvalue="JUnit.SudokuBoardDaoFactoryTest" />
       </list>
     </recent_temporary>
   </component>
@@ -148,6 +239,29 @@
       <workItem from="1634833189145" duration="1812000" />
       <workItem from="1634845082819" duration="806000" />
       <workItem from="1635965031778" duration="1240000" />
+      <workItem from="1636334349522" duration="63000" />
+      <workItem from="1636813311930" duration="487000" />
+      <workItem from="1636814269839" duration="1883000" />
+      <workItem from="1636816474376" duration="313000" />
+      <workItem from="1636885914649" duration="5305000" />
+      <workItem from="1636905107914" duration="292000" />
+      <workItem from="1636906253088" duration="2823000" />
+      <workItem from="1636910106020" duration="1058000" />
+      <workItem from="1636911288683" duration="540000" />
+      <workItem from="1636942022198" duration="731000" />
+      <workItem from="1637316822326" duration="665000" />
+      <workItem from="1637516184112" duration="1634000" />
+      <workItem from="1637518280904" duration="2117000" />
+      <workItem from="1638003980173" duration="5148000" />
+      <workItem from="1638021238207" duration="976000" />
+      <workItem from="1638268854927" duration="3303000" />
+      <workItem from="1638285625376" duration="3598000" />
+      <workItem from="1638291214744" duration="643000" />
+      <workItem from="1638292287882" duration="999000" />
+      <workItem from="1638362964530" duration="587000" />
+      <workItem from="1639140023723" duration="198000" />
+      <workItem from="1639140314237" duration="203000" />
+      <workItem from="1639140631452" duration="1419000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;Przeksztalcanie struktury projektu&quot;">
       <created>1634845564660</created>
@@ -170,7 +284,28 @@
       <option name="project" value="LOCAL" />
       <updated>1634845796340</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Walka z zadaniem 5">
+      <created>1636905410902</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1636905410902</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Zadanie 5">
+      <created>1636941074569</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1636941074569</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Zadanie 6">
+      <created>1637551336636</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1637551336636</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,7 +327,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="test" />
+                        <option value="HEAD" />
                       </list>
                     </value>
                   </entry>
@@ -207,6 +342,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="&quot;Przeksztalcanie struktury projektu&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Przeksztalcanie struktury projektu&quot;" />
+    <MESSAGE value="Walka z zadaniem 5" />
+    <MESSAGE value="Zadanie 5" />
+    <MESSAGE value="Zadanie 6" />
+    <MESSAGE value="Poprawki" />
+    <option name="LAST_COMMIT_MESSAGE" value="Poprawki" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
