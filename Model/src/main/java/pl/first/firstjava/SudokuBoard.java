@@ -8,13 +8,26 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
 
-public class SudokuBoard implements Serializable {
+public class SudokuBoard implements Serializable, Cloneable {
     private SudokuSolver solver;
     private SudokuField[][] board = new SudokuField[9][9];
 
     @Override
     public boolean equals(Object o) {
         return new EqualsBuilder().append(board, ((SudokuBoard) o).board).isEquals();
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        SudokuSolver sudokuSolver = new BacktrackingSudokuSolver();
+        SudokuBoard sudokuBoard = new SudokuBoard(sudokuSolver);
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                sudokuBoard.setBoard(i, j, getBoard(i, j));
+            }
+        }
+
+        return sudokuBoard;
     }
 
     @Override

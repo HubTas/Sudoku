@@ -1,11 +1,13 @@
 package pl.first.firstjava;
 
 import java.io.Serializable;
+
+import org.apache.commons.lang3.ObjectUtils;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
-public class SudokuField implements Serializable {
+public class SudokuField implements Serializable, Cloneable, Comparable<SudokuField> {
     private int value;
 
     @Override
@@ -33,5 +35,23 @@ public class SudokuField implements Serializable {
     @Override
     public String toString() {
         return new ToStringBuilder(this).append("value", value).toString();
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
+
+    @Override
+    public int compareTo(SudokuField o) {
+        if(o == null) throw new NullPointerException("Obj is empty");{}
+
+        if (this.getFieldValue() == o.getFieldValue()) {
+            return 0;
+        } else if (this.getFieldValue() > o.getFieldValue()) {
+            return 1;
+        } else {
+            return -1;
+        }
     }
 }
