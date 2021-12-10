@@ -8,6 +8,8 @@
     </JAVADOC>
     <SOURCES>
       <root url="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0-sources.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../openjfx-17.0.1_windows-x64_bin-sdk/javafx-sdk-17.0.1" />
     </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/../../openjfx-17.0.1_windows-x64_bin-sdk/javafx-sdk-17.0.1" recursive="false" type="SOURCES" />
   </library>
 </component>
