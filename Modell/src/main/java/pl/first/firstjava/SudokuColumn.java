@@ -10,7 +10,7 @@ public class SudokuColumn extends SudokuSection implements Cloneable {
     }
 
     @Override
-    protected Object clone() throws CloneNotSupportedException {
+    public SudokuColumn clone() throws CloneNotSupportedException {
         List<SudokuField> columnField = new ArrayList<>(getSudokuFieldList());
         SudokuColumn sudokuColumn = new SudokuColumn(columnField);
 

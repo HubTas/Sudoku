@@ -6,12 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="FirstJava" />
+        <module name="ModelProject" />
         <module name="View" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="FirstJava" target="16" />
+      <module name="Modell" target="17" />
+      <module name="ModelProject" target="16" />
       <module name="Projekt" target="17" />
       <module name="View" target="17" />
     </bytecodeTargetLevel>

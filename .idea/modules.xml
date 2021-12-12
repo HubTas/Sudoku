@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Model/FirstJava.iml" filepath="$PROJECT_DIR$/Model/FirstJava.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Modell/ModelProject.iml" filepath="$PROJECT_DIR$/Modell/ModelProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/Projekt.iml" filepath="$PROJECT_DIR$/Projekt.iml" />
       <module fileurl="file://$PROJECT_DIR$/View/View.iml" filepath="$PROJECT_DIR$/View/View.iml" />
     </modules>
