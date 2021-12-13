@@ -8,7 +8,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
 
-public class SudokuBoard implements Serializable, Cloneable {
+public class SudokuBoard implements Serializable, Cloneable, Prototype<SudokuBoard> {
     private SudokuSolver solver;
     private SudokuField[][] board = new SudokuField[9][9];
 
@@ -18,7 +18,7 @@ public class SudokuBoard implements Serializable, Cloneable {
     }
 
     @Override
-    public SudokuBoard clone() throws CloneNotSupportedException {
+    public Prototype<SudokuBoard> clone() throws CloneNotSupportedException {
         SudokuSolver sudokuSolver = new BacktrackingSudokuSolver();
         SudokuBoard sudokuBoard = new SudokuBoard(sudokuSolver);
         for (int i = 0; i < 9; i++) {

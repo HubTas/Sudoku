@@ -153,24 +153,6 @@ class SudokuBoardTest {
     }
 
     @Test
-    public void getSudokuFieldListTest() {
-        SudokuRow sudokuRow = new SudokuRow(Arrays.asList(
-        new SudokuField(1),
-        new SudokuField(2),
-        new SudokuField(3),
-        new SudokuField(4),
-        new SudokuField(5),
-        new SudokuField(6),
-        new SudokuField(7),
-        new SudokuField(8),
-        new SudokuField(9)));
-
-        SudokuField sudokuField = new SudokuField(3);
-        List<SudokuField> fields = sudokuRow.getSudokuFieldList();
-        fields.set(0, sudokuField);
-    }
-
-    @Test
     public void rowCloneTest() throws CloneNotSupportedException {
         SudokuRow sudokuRow = new SudokuRow(Arrays.asList(
                 new SudokuField(1),
@@ -222,5 +204,39 @@ class SudokuBoardTest {
         SudokuBox box1 = new SudokuBox(fields);
         SudokuBox box2 = (SudokuBox) box1.clone();
         assertTrue(sudokuBox.equals(box1) && sudokuBox.equals(box2));
+    }
+
+    @Test
+    public void sudokuBoardCloneTest() throws CloneNotSupportedException {
+        BacktrackingSudokuSolver solver = new BacktrackingSudokuSolver();
+        SudokuBoard sudokuBoard1 = new SudokuBoard(solver);
+        SudokuBoard sudokuBoard2 = (SudokuBoard) sudokuBoard1.clone();
+        assertTrue(sudokuBoard1.equals(sudokuBoard2) && sudokuBoard2.equals(sudokuBoard1));
+    }
+
+    @Test
+    public void cloneTest() throws CloneNotSupportedException {
+        SudokuField sudokuField1 = new SudokuField(8);
+        SudokuField sudokuField2 = (SudokuField) sudokuField1.clone();
+        assertTrue(sudokuField1.equals(sudokuField2) && sudokuField2.equals(sudokuField1));
+    }
+
+    @Test
+    public void compareToTest() {
+        SudokuField sudokuField1 = new SudokuField(4);
+        SudokuField sudokuField2 = new SudokuField(5);
+        SudokuField sudokuField3 = new SudokuField(8);
+        SudokuField sudokuField4 = new SudokuField(8);
+        SudokuField sudokuField5 = new SudokuField(8);
+        assertEquals(sudokuField1.compareTo(sudokuField2), -1);
+        assertEquals(sudokuField1.compareTo(sudokuField2), -(sudokuField2.compareTo(sudokuField1)));
+        assertEquals(sudokuField3.compareTo(sudokuField1), 1);
+        assertEquals(sudokuField3.compareTo(sudokuField4), 0);
+        assertTrue(sudokuField1.compareTo(sudokuField2) < 0 && sudokuField2.compareTo(sudokuField3) < 0 && sudokuField1.compareTo(sudokuField3) < 0);
+        assertTrue(sudokuField3.compareTo(sudokuField4) == 0 && sudokuField4.compareTo(sudokuField5) == 0 && sudokuField3.compareTo(sudokuField5) == 0);
+        SudokuField sudokuFieldNull = null;
+        assertThrows(NullPointerException.class,()->{
+           sudokuField1.compareTo(sudokuFieldNull);
+        });
     }
 }
