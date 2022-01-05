@@ -1,6 +1,7 @@
 package pl.first.firstjava;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class SudokuRow extends SudokuSection implements Cloneable {
@@ -11,9 +12,11 @@ public class SudokuRow extends SudokuSection implements Cloneable {
 
     @Override
     public SudokuRow clone() throws CloneNotSupportedException {
-        List<SudokuField> rowField = new ArrayList<>(getSudokuFieldList());
-        SudokuRow sudokuRow = new SudokuRow(rowField);
-
+        List<SudokuField> fields = Arrays.asList(new SudokuField[9]);
+        for (int i = 0; i < 9; i++) {
+            fields.set(i,(SudokuField) getSudokuFieldList().get(i).clone());
+        }
+        SudokuRow sudokuRow = new SudokuRow(fields);
         return sudokuRow;
     }
 }

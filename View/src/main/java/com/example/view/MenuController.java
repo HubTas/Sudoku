@@ -49,6 +49,7 @@ public class MenuController implements Initializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
         mainController.setScreen(pane);
     }
 

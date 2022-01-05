@@ -31,6 +31,7 @@ public class BoardController implements Initializable {
                 TextField field = new TextField();
                 field.setMinSize(50, 50);
                 field.setFont(Font.font(18));
+                field.setOpacity(100);
                 field.setDisable(true);
                 field.setText(String.valueOf(board.getBoard(i,j)));
                 grid.add(field,i,j);

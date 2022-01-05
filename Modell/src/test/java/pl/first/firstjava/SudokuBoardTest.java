@@ -168,6 +168,8 @@ class SudokuBoardTest {
         SudokuRow row1 = new SudokuRow(fields);
         SudokuRow row2 = (SudokuRow) row1.clone();
         assertTrue(sudokuRow.equals(row1) && sudokuRow.equals(row2));
+        sudokuRow.getSudokuFieldList().get(4).setFieldValue(7);
+        assertFalse(sudokuRow.equals(row1) && sudokuRow.equals(row2));
     }
 
     @Test
@@ -184,8 +186,10 @@ class SudokuBoardTest {
                 new SudokuField(9)));
         List<SudokuField> fields = sudokuColumn.getSudokuFieldList();
         SudokuColumn column1 = new SudokuColumn(fields);
-        SudokuColumn column2 = (SudokuColumn) column1.clone();
+        SudokuColumn column2 =  column1.clone();
         assertTrue(sudokuColumn.equals(column1) && sudokuColumn.equals(column2));
+        sudokuColumn.getSudokuFieldList().get(4).setFieldValue(7);
+        assertFalse(sudokuColumn.equals(column1) && sudokuColumn.equals(column2));
     }
 
     @Test
@@ -204,6 +208,8 @@ class SudokuBoardTest {
         SudokuBox box1 = new SudokuBox(fields);
         SudokuBox box2 = (SudokuBox) box1.clone();
         assertTrue(sudokuBox.equals(box1) && sudokuBox.equals(box2));
+        sudokuBox.getSudokuFieldList().get(4).setFieldValue(7);
+        assertFalse(sudokuBox.equals(box1) && sudokuBox.equals(box2));
     }
 
     @Test
