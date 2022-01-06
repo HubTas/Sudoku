@@ -4,30 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26f8275a-045b-49db-9704-836a65531d20" name="Default Changelist" comment="Poprawki">
-      <change afterPath="$PROJECT_DIR$/View/src/main/java/com/example/view/Cords.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/src/main/java/com/example/view/Difficulity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/src/main/java/com/example/view/StageSetter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/src/main/java/com/example/view/boardController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/src/main/java/com/example/view/menuController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/src/main/resources/Language_eng.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/src/main/resources/Language_pl.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/src/main/resources/board.fxml" afterDir="false" />
+    <list default="true" id="26f8275a-045b-49db-9704-836a65531d20" name="Default Changelist" comment="Zadanie 11, wstep do FX i internacjonalizacji">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modell/src/main/java/pl/first/firstjava/SudokuBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/Modell/src/main/java/pl/first/firstjava/SudokuBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modell/src/main/java/pl/first/firstjava/SudokuField.java" beforeDir="false" afterPath="$PROJECT_DIR$/Modell/src/main/java/pl/first/firstjava/SudokuField.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modell/src/test/java/pl/first/firstjava/SudokuBoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Modell/src/test/java/pl/first/firstjava/SudokuBoardTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/View/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/main/java/com/example/view/AutorzyController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/main/java/com/example/view/BoardController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/main/java/com/example/view/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/java/com/example/view/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/main/java/com/example/view/MainController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/main/java/com/example/view/MenuController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/main/resources/com/example/view/autorzy.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/main/resources/com/example/view/board.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/main/resources/com/example/view/main.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/main/resources/com/example/view/menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/resources/menu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modell/src/main/java/pl/first/firstjava/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/Modell/src/main/java/pl/first/firstjava/App.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,10 +171,10 @@
     </configuration>
     <list>
       <item itemvalue="Application.Main" />
+      <item itemvalue="Application.App" />
       <item itemvalue="JUnit.SudokuBoardTest" />
       <item itemvalue="JUnit.SudokuBoardTest.columnCloneTest" />
       <item itemvalue="JUnit.SudokuBoardTest.cloneTest" />
-      <item itemvalue="Application.App" />
     </list>
     <recent_temporary>
       <list>
@@ -257,7 +236,8 @@
       <workItem from="1641414161784" duration="171000" />
       <workItem from="1641420620669" duration="3345000" />
       <workItem from="1641424036950" duration="5730000" />
-      <workItem from="1641429850748" duration="1669000" />
+      <workItem from="1641429850748" duration="1804000" />
+      <workItem from="1641431916970" duration="99000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;Przeksztalcanie struktury projektu&quot;">
       <created>1634845564660</created>
@@ -308,7 +288,14 @@
       <option name="project" value="LOCAL" />
       <updated>1641382957003</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Zadanie 11, wstep do FX i internacjonalizacji">
+      <created>1641431666153</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1641431666153</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -349,7 +336,8 @@
     <MESSAGE value="Zadanie 5" />
     <MESSAGE value="Zadanie 6" />
     <MESSAGE value="Poprawki" />
-    <option name="LAST_COMMIT_MESSAGE" value="Poprawki" />
+    <MESSAGE value="Zadanie 11, wstep do FX i internacjonalizacji" />
+    <option name="LAST_COMMIT_MESSAGE" value="Zadanie 11, wstep do FX i internacjonalizacji" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
