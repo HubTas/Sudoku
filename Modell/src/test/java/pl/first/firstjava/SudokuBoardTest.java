@@ -218,6 +218,7 @@ class SudokuBoardTest {
         SudokuBoard sudokuBoard1 = new SudokuBoard(solver);
         SudokuBoard sudokuBoard2 = (SudokuBoard) sudokuBoard1.clone();
         assertTrue(sudokuBoard1.equals(sudokuBoard2) && sudokuBoard2.equals(sudokuBoard1));
+
     }
 
     @Test

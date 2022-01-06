@@ -44,6 +44,14 @@ public class SudokuBoard implements Serializable, Cloneable, Prototype<SudokuBoa
         }
     }
 
+    public void setEditable(int x, int y){
+        board[x][y].setEmpty();
+    }
+
+    public boolean isEditable(int x, int y){
+        return board[x][y].isEmpty();
+    }
+
     public void solveGame() {
         solver.solve(this);
     }
@@ -103,6 +111,8 @@ public class SudokuBoard implements Serializable, Cloneable, Prototype<SudokuBoa
         }
         return flag;
     }
+    public boolean isSudokuSafe()
+    {return checkBoard();}
 
     public SudokuRow getRow(int y) {
         List<SudokuField> fields = Arrays.asList(new SudokuField[9]);

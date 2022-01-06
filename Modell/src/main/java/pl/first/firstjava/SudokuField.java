@@ -10,6 +10,16 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 public class SudokuField implements Serializable, Cloneable, Comparable<SudokuField> {
     private int value;
 
+    public void setEmpty() {
+        isEmpty = true;
+    }
+
+    public boolean isEmpty() {
+        return isEmpty;
+    }
+
+    private boolean isEmpty;
+
     @Override
     public boolean equals(Object o) {
         return new EqualsBuilder().append(value, ((SudokuField) o).value).isEquals();

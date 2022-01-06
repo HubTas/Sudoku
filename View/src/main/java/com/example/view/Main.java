@@ -6,16 +6,16 @@ import javafx.scene.Scene;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+import java.util.ResourceBundle;
+
 
 public class Main extends Application {
+
+    ResourceBundle bundle = ResourceBundle.getBundle("Language");
     @Override
-    public void start(Stage stage) throws Exception {
-    FXMLLoader loader = new FXMLLoader(this.getClass().getResource("main.fxml"));
-    StackPane stackPane = loader.load();
-    Scene scene = new Scene(stackPane,600,600);
-    stage.setScene(scene);
-     stage.setTitle("Sudoku Game");
-     stage.show();
+    public void start(Stage stage) throws IOException {
+        StageSetter.buildStage(stage,"/menu.fxml","Sudoku",bundle);
     }
 
     public static void main(String[] args) {
