@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26f8275a-045b-49db-9704-836a65531d20" name="Default Changelist" comment="Zadanie 11, wstep do FX i internacjonalizacji">
-      <change afterPath="$PROJECT_DIR$/View/src/main/java/com/example/view/InfoWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/main/java/com/example/view/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/java/com/example/view/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/main/java/com/example/view/boardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/java/com/example/view/boardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/main/java/com/example/view/menuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/java/com/example/view/menuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/main/resources/Language_eng.properties" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/resources/Language_eng.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/main/resources/Language_pl.properties" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/resources/Language_pl.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/main/resources/board.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/resources/board.fxml" afterDir="false" />
+    <list default="true" id="26f8275a-045b-49db-9704-836a65531d20" name="Default Changelist" comment="poprawki">
       <change beforePath="$PROJECT_DIR$/View/src/main/resources/menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/resources/menu.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -248,7 +240,7 @@
       <workItem from="1641554408374" duration="4218000" />
       <workItem from="1641572955071" duration="4637000" />
       <workItem from="1641654237698" duration="1132000" />
-      <workItem from="1641655481019" duration="1494000" />
+      <workItem from="1641655481019" duration="1627000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;Przeksztalcanie struktury projektu&quot;">
       <created>1634845564660</created>
@@ -313,7 +305,14 @@
       <option name="project" value="LOCAL" />
       <updated>1641432045055</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="poprawki">
+      <created>1641657028178</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1641657028178</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -355,7 +354,8 @@
     <MESSAGE value="Zadanie 6" />
     <MESSAGE value="Poprawki" />
     <MESSAGE value="Zadanie 11, wstep do FX i internacjonalizacji" />
-    <option name="LAST_COMMIT_MESSAGE" value="Zadanie 11, wstep do FX i internacjonalizacji" />
+    <MESSAGE value="poprawki" />
+    <option name="LAST_COMMIT_MESSAGE" value="poprawki" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
