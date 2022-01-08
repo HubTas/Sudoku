@@ -15,7 +15,7 @@ public class Main extends Application {
     ResourceBundle bundle = ResourceBundle.getBundle("Language");
     @Override
     public void start(Stage stage) throws IOException {
-        StageSetter.buildStage(stage,"/menu.fxml","Sudoku",bundle);
+        StageSetter.buildStage(stage,"/menu.fxml",bundle.getString("menuTitle"),bundle);
     }
 
     public static void main(String[] args) {

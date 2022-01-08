@@ -1,7 +1,9 @@
 package com.example.view;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
@@ -13,32 +15,60 @@ public class menuController {
     @FXML
     private ComboBox SudokuDifficulty;
 
-    @FXML
-    private ComboBox SudokuLanguage;
-
     private ResourceBundle bundle = ResourceBundle.getBundle("Language");
 
     public static String getLevel() {
         return level;
     }
 
-    public static String getLang() {
-        return lang;
-    }
-
     private static String level;
-    private static String lang;
+
+    private InfoWindow window = new InfoWindow();
 
     @FXML
-    private void initialize() throws IOException{
+    private Button authors;
+
+    @FXML
+    private Button close;
+
+    @FXML
+    private Label diff;
+
+    @FXML
+    private Button engLang;
+
+    @FXML
+    private Button next;
+
+    @FXML
+    private Button plLang;
+
+    @FXML
+    void ChangeLangToEng(ActionEvent event) {
+        try{
+            Locale.setDefault(new Locale("eng"));
+            StageSetter.buildStage("/menu.fxml",bundle.getString("menuTitle"), bundle);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    void ChangeLangToPl(ActionEvent event) {
+        try{
+            Locale.setDefault(new Locale("pl"));
+            StageSetter.buildStage("/menu.fxml",bundle.getString("menuTitle"), bundle);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void initialize() throws IOException {
         SudokuDifficulty.getItems().setAll(
                 bundle.getString("easyLvl"),
                 bundle.getString("mediumLvl"),
                 bundle.getString("hardLvl")
-        );
-        SudokuLanguage.getItems().setAll(
-                bundle.getString("pl"),
-                bundle.getString("eng")
         );
     }
 
@@ -48,24 +78,9 @@ public class menuController {
             if(level == null){
                 menuController.level = SudokuDifficulty.getSelectionModel().getSelectedItem().toString();
             }
-            StageSetter.buildStage("/board.fxml",bundle);
+            StageSetter.buildStage("/board.fxml",bundle.getString("boardTitle"),bundle);
         } catch (NullPointerException e) {
-            System.out.println("Blad sceny");
-        }
-    }
-
-    @FXML
-    void confirmLanguage(ActionEvent event) {
-        try{
-            lang = SudokuLanguage.getSelectionModel().getSelectedItem().toString();
-            if(lang.equals(bundle.getString("pl"))){
-                Locale.setDefault(new Locale("pl"));
-            } else if(lang.equals(bundle.getString("eng"))){
-                Locale.setDefault(new Locale("eng"));
-            }
-            StageSetter.buildStage("/menu.fxml","Glowne menu", bundle);
-        } catch (NullPointerException | IOException e ){
-            System.out.println("blad");
+            window.text(bundle.getString("error"),bundle.getString("noDiff"), Alert.AlertType.WARNING);
         }
     }
 
@@ -76,21 +91,6 @@ public class menuController {
 
     @FXML
     void wychodzenie(ActionEvent event) {
-
+        Platform.exit();
     }
-
-
-
-
-    @FXML
-    private Button autorzy;
-
-    @FXML
-    private Button button;
-
-    @FXML
-    private Label label1;
-
-    @FXML
-    private Button wyjdz;
 }

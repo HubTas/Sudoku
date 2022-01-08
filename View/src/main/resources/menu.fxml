@@ -8,12 +8,11 @@
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.view.menuController">
     <children>
         <ComboBox fx:id="SudokuDifficulty" layoutX="201.0" layoutY="168.0" prefWidth="150.0" promptText="" />
-        <Label fx:id="label1" layoutX="46.0" layoutY="172.0" text="%diffLevel" />
-        <Button fx:id="button" layoutX="233.0" layoutY="288.0" mnemonicParsing="false" onAction="#generateSudoku" text="%next" />
-        <Button fx:id="authors" layoutX="122.0" layoutY="277.0" mnemonicParsing="false" onAction="#showAutorzy" text="%authors" />
-        <Button fx:id="close" layoutX="300.0" layoutY="284.0" mnemonicParsing="false" onAction="#wychodzenie" text="%close" />
-      <Label layoutX="106.0" layoutY="213.0" text="%lang" />
-      <ComboBox fx:id="SudokuLanguage" layoutX="201.0" layoutY="209.0" prefWidth="150.0" promptText="" />
-      <Button fx:id="language" layoutX="400.0" layoutY="218.0" mnemonicParsing="false" onAction="#confirmLanguage" text="%confirm" />
+        <Label fx:id="diff" layoutX="249.0" layoutY="151.0" text="%diffLevel" />
+        <Button fx:id="next" layoutX="252.0" layoutY="277.0" mnemonicParsing="false" onAction="#generateSudoku" text="%next" />
+        <Button fx:id="authors" layoutX="168.0" layoutY="277.0" mnemonicParsing="false" onAction="#showAutorzy" text="%authors" />
+        <Button fx:id="close" layoutX="325.0" layoutY="277.0" mnemonicParsing="false" onAction="#wychodzenie" text="%close" />
+      <Button fx:id="plLang" layoutX="368.0" layoutY="14.0" mnemonicParsing="false" onAction="#ChangeLangToPl" prefWidth="100.0" text="pl" />
+      <Button fx:id="engLang" layoutX="487.0" layoutY="14.0" mnemonicParsing="false" onAction="#ChangeLangToEng" prefWidth="100.0" text="eng" />
     </children>
 </Pane>

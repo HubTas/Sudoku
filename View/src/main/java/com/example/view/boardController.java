@@ -1,14 +1,19 @@
 package com.example.view;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.Border;
 import javafx.scene.layout.GridPane;
+import javafx.scene.paint.Color;
 import pl.first.firstjava.BacktrackingSudokuSolver;
 import pl.first.firstjava.SudokuBoard;
 import pl.first.firstjava.SudokuSolver;
 
+import java.io.IOException;
 import java.util.ResourceBundle;
 
 public class boardController {
@@ -19,10 +24,14 @@ public class boardController {
     @FXML
     private Button checkSudoku;
 
+    @FXML
+    private Button exit;
+
     private Difficulity level = new Difficulity();
     private ResourceBundle bundle = ResourceBundle.getBundle("Language");
     SudokuSolver solver = new BacktrackingSudokuSolver();
     private SudokuBoard board = new SudokuBoard(solver);
+    private InfoWindow window = new InfoWindow();
 
     @FXML
     private void initialize() {
@@ -39,10 +48,13 @@ public class boardController {
                 field.setMinSize(50, 50);
                 field.setOpacity(100);
                 if(!(board.getBoard(i,j) == 0 || board.isEditable(i,j))){
+                    field.setStyle("-fx-text-fill: rgba(75,128,0,0.74);-fx-alignment: center;");
                     field.setDisable(true);
                     field.setText(String.valueOf(board.getBoard(i,j)));
-                } else if(board.getBoard(i,j) != 0 && board.isEditable(i,j)){
-                    field.setText(String.valueOf(board.getBoard(i,j)));
+                } else {
+                    field.setStyle("-fx-background-color: rgba(255,0,0,0.11);-fx-alignment: center");
+                    field.setText("");
+//
                 }
                 grid.add(field,j,i);
             }
@@ -76,15 +88,19 @@ public class boardController {
     private void check(ActionEvent event) {
 
         if(!isValueValid()){
-            System.out.println("zla wartosc");
+            window.text(bundle.getString("error"),bundle.getString("wrongValue"), Alert.AlertType.WARNING);
         } else {
             update();
             if(board.isSudokuSafe()){
-                System.out.println("gitem jestes, udalo sie");
+                window.text(bundle.getString("score"),bundle.getString("easyWin"), Alert.AlertType.INFORMATION);
             } else {
-                System.out.println("gowno z Ciebie, nie umiesz nawet w sudoku");
+                window.text(bundle.getString("score"),bundle.getString("loose"), Alert.AlertType.INFORMATION);
             }
         }
+    }
+    @FXML
+    void close(ActionEvent event) {
+        Platform.exit();
     }
 
 }
