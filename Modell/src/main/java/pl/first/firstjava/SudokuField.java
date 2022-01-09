@@ -14,6 +14,10 @@ public class SudokuField implements Serializable, Cloneable, Comparable<SudokuFi
         isEmpty = true;
     }
 
+    public void setNotEmpty() {
+        isEmpty = false;
+    }
+
     public boolean isEmpty() {
         return isEmpty;
     }

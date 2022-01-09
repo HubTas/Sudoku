@@ -10,6 +10,7 @@ import javafx.scene.control.Label;
 import java.io.IOException;
 import java.util.Locale;
 import java.util.ResourceBundle;
+import java.util.logging.Logger;
 
 public class menuController {
     @FXML
@@ -24,6 +25,8 @@ public class menuController {
     private static String level;
 
     private InfoWindow window = new InfoWindow();
+
+    private final Logger logger = Logger.getLogger(menuController.class.getName());
 
     @FXML
     private Button authors;
@@ -81,6 +84,7 @@ public class menuController {
             StageSetter.buildStage("/board.fxml",bundle.getString("boardTitle"),bundle);
         } catch (NullPointerException e) {
             window.text(bundle.getString("error"),bundle.getString("noDiff"), Alert.AlertType.WARNING);
+            logger.warning("Bad language choosen");
         }
     }
 

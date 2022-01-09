@@ -48,6 +48,10 @@ public class SudokuBoard implements Serializable, Cloneable, Prototype<SudokuBoa
         board[x][y].setEmpty();
     }
 
+    public void setNotEditable(int x, int y){
+        board[x][y].setNotEmpty();
+    }
+
     public boolean isEditable(int x, int y){
         return board[x][y].isEmpty();
     }

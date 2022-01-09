@@ -1,12 +1,8 @@
 package pl.first.firstjava;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+import java.io.*;
 
-public class FileSudokuBoardDao implements Dao<SudokuBoard> {
+public class FileSudokuBoardDao implements Dao<SudokuBoard>, AutoCloseable {
 
     private String filename;
 
@@ -37,6 +33,20 @@ public class FileSudokuBoardDao implements Dao<SudokuBoard> {
             output2.writeObject(o);
         } catch (IOException e) {
             throw new RuntimeException(e);
+        }
+    }
+
+    @Override
+    public void close() throws Exception {
+        try {
+            FileInputStream write = new FileInputStream(filename);
+            FileOutputStream read = new FileOutputStream(filename);
+            write.close();
+            read.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }

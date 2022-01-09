@@ -8,17 +8,21 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.ResourceBundle;
+import java.util.logging.Logger;
 
 
 public class Main extends Application {
 
     ResourceBundle bundle = ResourceBundle.getBundle("Language");
+    private static final Logger logger = Logger.getLogger(Main.class.getName());
+
     @Override
     public void start(Stage stage) throws IOException {
         StageSetter.buildStage(stage,"/menu.fxml",bundle.getString("menuTitle"),bundle);
     }
 
     public static void main(String[] args) {
+        logger.info("Start game");
         launch();
     }
 }
