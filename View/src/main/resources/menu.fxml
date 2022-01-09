@@ -11,7 +11,7 @@
         <Label fx:id="diff" layoutX="249.0" layoutY="151.0" text="%diffLevel" />
         <Button fx:id="next" layoutX="252.0" layoutY="277.0" mnemonicParsing="false" onAction="#generateSudoku" text="%next" />
         <Button fx:id="authors" layoutX="168.0" layoutY="277.0" mnemonicParsing="false" onAction="#showAutorzy" text="%authors" />
-        <Button fx:id="close" layoutX="325.0" layoutY="277.0" mnemonicParsing="false" onAction="#wychodzenie" text="%close" />
+        <Button fx:id="close" layoutX="325.0" layoutY="277.0" mnemonicParsing="false" onAction="#close" text="%close" />
       <Button fx:id="plLang" layoutX="368.0" layoutY="14.0" mnemonicParsing="false" onAction="#ChangeLangToPl" prefWidth="100.0" text="%pl" />
       <Button fx:id="engLang" layoutX="487.0" layoutY="14.0" mnemonicParsing="false" onAction="#ChangeLangToEng" prefWidth="100.0" text="%eng" />
     </children>

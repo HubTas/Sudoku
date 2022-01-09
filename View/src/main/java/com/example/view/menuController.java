@@ -84,17 +84,19 @@ public class menuController {
             StageSetter.buildStage("/board.fxml",bundle.getString("boardTitle"),bundle);
         } catch (NullPointerException e) {
             window.text(bundle.getString("error"),bundle.getString("noDiff"), Alert.AlertType.WARNING);
-            logger.warning("Bad language choosen");
+            logger.warning(bundle.getString("noDiff"));
         }
     }
 
     @FXML
     void showAutorzy(ActionEvent event) {
-
+        ResourceBundle bundle1 = ResourceBundle.getBundle("com.example.view.Authors");
+        window.text(bundle.getString("authors"), bundle1.getObject("Author1") + "\n" + bundle1.getObject("Author2") + "\n" + bundle1.getObject("University"), Alert.AlertType.INFORMATION);
     }
 
     @FXML
-    void wychodzenie(ActionEvent event) {
+    void close(ActionEvent event) {
+        logger.info(bundle.getString("closeApp"));
         Platform.exit();
     }
 }

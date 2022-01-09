@@ -5,25 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26f8275a-045b-49db-9704-836a65531d20" name="Default Changelist" comment="Zadanie 8, wyświetlanie boarda">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_30.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/src/main/java/com/example/view/config/properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/src/main/java/exception/FileIsNullException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/src/main/java/exception/Messages.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/src/main/java/exception/SudokuDaoException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/View/src/main/java/com/example/view/Authors_en.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/View/src/main/java/com/example/view/Authors_pl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modell/src/main/java/pl/first/firstjava/FileSudokuBoardDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Modell/src/main/java/pl/first/firstjava/FileSudokuBoardDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modell/src/main/java/pl/first/firstjava/SudokuBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/Modell/src/main/java/pl/first/firstjava/SudokuBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modell/src/main/java/pl/first/firstjava/SudokuField.java" beforeDir="false" afterPath="$PROJECT_DIR$/Modell/src/main/java/pl/first/firstjava/SudokuField.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/View.iml" beforeDir="false" afterPath="$PROJECT_DIR$/View/View.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/View/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/src/main/java/com/example/view/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/java/com/example/view/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/src/main/java/com/example/view/boardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/java/com/example/view/boardController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/src/main/java/com/example/view/menuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/java/com/example/view/menuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/main/resources/Language_eng.properties" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/resources/Language_eng.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/main/resources/Language_pl.properties" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/resources/Language_pl.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/src/main/resources/board.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/resources/board.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/main/resources/menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/resources/menu.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +71,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="jdk.selected.JAVA_MODULE" value="17 (2)" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../kompoFX2/an_pn_1200_03" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/mkw_sr_1345_02-masterd158c24e2d1/project" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -260,6 +251,8 @@
       <workItem from="1641654237698" duration="1132000" />
       <workItem from="1641655481019" duration="1627000" />
       <workItem from="1641725341451" duration="11851000" />
+      <workItem from="1641756052809" duration="149000" />
+      <workItem from="1641756272203" duration="3044000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;Przeksztalcanie struktury projektu&quot;">
       <created>1634845564660</created>

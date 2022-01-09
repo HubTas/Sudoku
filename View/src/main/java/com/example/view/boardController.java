@@ -111,20 +111,21 @@ public class boardController {
 
         if(!isValueValid()){
             window.text(bundle.getString("error"),bundle.getString("wrongValue"), Alert.AlertType.WARNING);
-            logger.warning("Wrong value of grid");
+            logger.warning(bundle.getString("wrongValue"));
         } else {
             update();
             if(board.isSudokuSafe()){
                 window.text(bundle.getString("score"),bundle.getString("easyWin"), Alert.AlertType.INFORMATION);
-                logger.info("Winner");
+                logger.info(bundle.getString("easyWin"));
             } else {
                 window.text(bundle.getString("score"),bundle.getString("loose"), Alert.AlertType.INFORMATION);
-                logger.info("Looser");
+                logger.info(bundle.getString("loose"));
             }
         }
     }
     @FXML
     void close(ActionEvent event) {
+        logger.info(bundle.getString("closeApp"));
         Platform.exit();
     }
 
@@ -135,13 +136,13 @@ public class boardController {
             try {
                 fileSudokuBoardDao = new FileSudokuBoardDao("plik.txt");
                 fileSudokuBoardDao.write(board);
-                logger.info("Saved to file");
+                logger.info(bundle.getString("save"));
             } catch (NullPointerException e) {
-                throw new FileIsNullException("nullFile");
+                throw new FileIsNullException(bundle.getString("fileNull"));
             }
         } else {
-            logger.warning("Input is not valid");
-            window.text(bundle.getString("warning"), bundle.getString("warnText"), Alert.AlertType.WARNING);
+            logger.warning(bundle.getString("wrongValue"));
+            window.text(bundle.getString("error"), bundle.getString("wrongValue"), Alert.AlertType.WARNING);
         }
     }
 
@@ -153,9 +154,10 @@ public class boardController {
         try {
             fileSudokuBoardDao = new FileSudokuBoardDao("plik.txt");
             sudokuBoard = fileSudokuBoardDao.read();
+            bundle.getString("read");
             logger.info(sudokuBoard.toString());
         } catch (NullPointerException e) {
-            throw new FileIsNullException("nullFile");
+            throw new FileIsNullException("fileNull");
         }
         if(sudokuBoard != null) {
             board = sudokuBoard;

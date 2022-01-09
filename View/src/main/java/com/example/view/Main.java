@@ -13,7 +13,7 @@ import java.util.logging.Logger;
 
 public class Main extends Application {
 
-    ResourceBundle bundle = ResourceBundle.getBundle("Language");
+    static ResourceBundle bundle = ResourceBundle.getBundle("Language");
     private static final Logger logger = Logger.getLogger(Main.class.getName());
 
     @Override
@@ -22,7 +22,7 @@ public class Main extends Application {
     }
 
     public static void main(String[] args) {
-        logger.info("Start game");
+        logger.info(bundle.getString("startApp"));
         launch();
     }
 }

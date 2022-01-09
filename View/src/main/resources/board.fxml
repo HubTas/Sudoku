@@ -34,8 +34,8 @@
         </rowConstraints>
       </GridPane>
       <Button fx:id="checkSudoku" layoutX="280.0" layoutY="627.0" mnemonicParsing="false" onAction="#check" text="%check" />
-      <Button fx:id="Read" layoutX="164.0" layoutY="627.0" mnemonicParsing="false" onAction="#loadFromFile" text="Odczyt" />
-      <Button fx:id="Save" layoutX="53.0" layoutY="627.0" mnemonicParsing="false" onAction="#saveToFile" text="Zapis" />
-      <Button fx:id="Exit" layoutX="440.0" layoutY="627.0" mnemonicParsing="false" onAction="#close" text="Zamknij" />
+      <Button fx:id="Read" layoutX="164.0" layoutY="627.0" mnemonicParsing="false" onAction="#loadFromFile" text="%saveFile" />
+      <Button fx:id="Save" layoutX="53.0" layoutY="627.0" mnemonicParsing="false" onAction="#saveToFile" text="%readFile" />
+      <Button fx:id="Exit" layoutX="440.0" layoutY="627.0" mnemonicParsing="false" onAction="#close" text="%close" />
    </children>
 </Pane>
