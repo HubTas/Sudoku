@@ -1,4 +1,4 @@
-package exception;
+package pl.first.firstjava.exception;
 
 import java.util.Locale;
 import java.util.ResourceBundle;

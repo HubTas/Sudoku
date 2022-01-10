@@ -8,6 +8,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.ResourceBundle;
+import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 
 
@@ -21,7 +22,9 @@ public class Main extends Application {
         StageSetter.buildStage(stage,"/menu.fxml",bundle.getString("menuTitle"),bundle);
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        FileHandler file = new FileHandler("Main log");
+        logger.addHandler(file);
         logger.info(bundle.getString("startApp"));
         launch();
     }

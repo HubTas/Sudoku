@@ -10,6 +10,7 @@ import javafx.scene.control.Label;
 import java.io.IOException;
 import java.util.Locale;
 import java.util.ResourceBundle;
+import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 
 public class menuController {
@@ -68,6 +69,8 @@ public class menuController {
 
     @FXML
     private void initialize() throws IOException {
+        FileHandler file = new FileHandler("Menu log");
+        logger.addHandler(file);
         SudokuDifficulty.getItems().setAll(
                 bundle.getString("easyLvl"),
                 bundle.getString("mediumLvl"),
@@ -80,6 +83,7 @@ public class menuController {
         try{
             if(level == null){
                 menuController.level = SudokuDifficulty.getSelectionModel().getSelectedItem().toString();
+                logger.info(bundle.getString("lvl") + level);
             }
             StageSetter.buildStage("/board.fxml",bundle.getString("boardTitle"),bundle);
         } catch (NullPointerException e) {

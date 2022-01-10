@@ -2,7 +2,7 @@ package com.example.view;
 
 import java.util.ListResourceBundle;
 
-public class Authors_en extends ListResourceBundle {
+public class Authors_eng extends ListResourceBundle {
 
     @Override
     protected Object[][] getContents() {

@@ -1,5 +1,7 @@
 package pl.first.firstjava;
 
+import pl.first.firstjava.exception.SudokuDaoException;
+
 import java.io.*;
 
 public class FileSudokuBoardDao implements Dao<SudokuBoard>, AutoCloseable {
@@ -12,27 +14,27 @@ public class FileSudokuBoardDao implements Dao<SudokuBoard>, AutoCloseable {
 
 
     @Override
-    public SudokuBoard read() {
+    public SudokuBoard read() throws SudokuDaoException {
         SudokuBoard o = null;
 
         try (FileInputStream input = new FileInputStream(filename);
              ObjectInputStream input2 = new ObjectInputStream(input)) {
             o = (SudokuBoard) input2.readObject();
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new SudokuDaoException("daoReadException");
         } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
+            throw new SudokuDaoException("daoReadException");
         }
         return o;
     }
 
     @Override
-    public void write(SudokuBoard o) {
+    public void write(SudokuBoard o) throws SudokuDaoException {
         try (FileOutputStream output = new FileOutputStream(filename);
              ObjectOutputStream output2 = new ObjectOutputStream(output)) {
             output2.writeObject(o);
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new SudokuDaoException("daoWriteException");
         }
     }
 

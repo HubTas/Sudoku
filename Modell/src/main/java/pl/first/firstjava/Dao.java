@@ -1,7 +1,9 @@
 package pl.first.firstjava;
 
-public interface Dao<T> {
-    T read();
+import pl.first.firstjava.exception.SudokuDaoException;
 
-    void write(T obj);
+public interface Dao<T> {
+    T read() throws SudokuDaoException;
+
+    void write(T obj) throws SudokuDaoException;
 }

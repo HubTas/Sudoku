@@ -1,5 +1,7 @@
 package exception;
 
+import pl.first.firstjava.exception.Messages;
+
 import java.util.Locale;
 
 public class FileIsNullException extends NullPointerException {

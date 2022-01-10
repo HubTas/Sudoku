@@ -1,12 +1,14 @@
 package pl.first.firstjava;
 
 import org.junit.jupiter.api.Test;
+import pl.first.firstjava.exception.SudokuDaoException;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class FileSudokuBoardDaoTest {
 
     @Test
-    public void writeAndReadTest(){
+    public void writeAndReadTest() throws SudokuDaoException {
         SudokuSolver solver = new BacktrackingSudokuSolver();
         SudokuBoardDaoFactory factory = new SudokuBoardDaoFactory();
         SudokuBoard board = new SudokuBoard(solver);
@@ -20,7 +22,7 @@ public class FileSudokuBoardDaoTest {
 
     @Test
     public void readExceptionTest(){
-        assertThrows(RuntimeException.class,()->{
+        assertThrows(SudokuDaoException.class,()->{
                 SudokuBoardDaoFactory factory = new SudokuBoardDaoFactory();
                 Dao<SudokuBoard> fileSudokuBoardDao;
                 fileSudokuBoardDao = factory.getFileDao("source2");
@@ -30,7 +32,7 @@ public class FileSudokuBoardDaoTest {
 
     @Test
     public void writeExceptionTest(){
-        assertThrows(RuntimeException.class,()->{
+        assertThrows(SudokuDaoException.class,()->{
             SudokuSolver solver = new BacktrackingSudokuSolver();
             SudokuBoardDaoFactory factory = new SudokuBoardDaoFactory();
             Dao<SudokuBoard> fileSudokuBoardDao;

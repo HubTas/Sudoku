@@ -1,16 +1,14 @@
 package com.example.view;
 
 import exception.FileIsNullException;
-import exception.SudokuDaoException;
+import pl.first.firstjava.exception.SudokuDaoException;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.Border;
 import javafx.scene.layout.GridPane;
-import javafx.scene.paint.Color;
 import javafx.stage.FileChooser;
 import pl.first.firstjava.BacktrackingSudokuSolver;
 import pl.first.firstjava.SudokuBoard;
@@ -22,8 +20,6 @@ import java.util.ResourceBundle;
 import java.io.File;
 import java.util.logging.FileHandler;
 import java.util.logging.Logger;
-
-import static com.example.view.StageSetter.getStage;
 
 public class boardController {
 
@@ -139,6 +135,8 @@ public class boardController {
                 logger.info(bundle.getString("save"));
             } catch (NullPointerException e) {
                 throw new FileIsNullException(bundle.getString("fileNull"));
+            } catch (SudokuDaoException e) {
+                throw new SudokuDaoException(bundle.getString("saveFailed"));
             }
         } else {
             logger.warning(bundle.getString("wrongValue"));
@@ -157,7 +155,9 @@ public class boardController {
             bundle.getString("read");
             logger.info(sudokuBoard.toString());
         } catch (NullPointerException e) {
-            throw new FileIsNullException("fileNull");
+            throw new FileIsNullException(bundle.getString("fileNull"));
+        } catch (SudokuDaoException e) {
+            throw new SudokuDaoException(bundle.getString("loadFailed"));
         }
         if(sudokuBoard != null) {
             board = sudokuBoard;

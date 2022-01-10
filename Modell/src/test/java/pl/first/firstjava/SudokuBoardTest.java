@@ -37,7 +37,7 @@ class SudokuBoardTest {
     public void testDifferentBoards() {
         SudokuSolver solver = new BacktrackingSudokuSolver();
         SudokuSolver solver2 = new BacktrackingSudokuSolver();
-        System.out.println("Different Boards");
+//        System.out.println("Different Boards");
         SudokuBoard instance = new SudokuBoard(solver);
         SudokuBoard instance2 = new SudokuBoard(solver2);
         instance.solveGame();

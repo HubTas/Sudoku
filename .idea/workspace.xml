@@ -5,16 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26f8275a-045b-49db-9704-836a65531d20" name="Default Changelist" comment="Zadanie 8, wyświetlanie boarda">
-      <change afterPath="$PROJECT_DIR$/View/src/main/java/com/example/view/Authors_en.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/src/main/java/com/example/view/Authors_pl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modell/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/Modell/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modell/src/main/java/pl/first/firstjava/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/Modell/src/main/java/pl/first/firstjava/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modell/src/main/java/pl/first/firstjava/Dao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Modell/src/main/java/pl/first/firstjava/Dao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modell/src/main/java/pl/first/firstjava/FileSudokuBoardDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Modell/src/main/java/pl/first/firstjava/FileSudokuBoardDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modell/src/test/java/pl/first/firstjava/FileSudokuBoardDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Modell/src/test/java/pl/first/firstjava/FileSudokuBoardDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modell/src/test/java/pl/first/firstjava/SudokuBoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Modell/src/test/java/pl/first/firstjava/SudokuBoardTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/main/java/com/example/view/Authors_en.java" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/java/com/example/view/Authors_eng.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/src/main/java/com/example/view/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/java/com/example/view/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/src/main/java/com/example/view/boardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/java/com/example/view/boardController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/src/main/java/com/example/view/menuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/java/com/example/view/menuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/main/java/exception/FileIsNullException.java" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/java/exception/FileIsNullException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/main/java/exception/Messages.java" beforeDir="false" afterPath="$PROJECT_DIR$/Modell/src/main/java/pl/first/firstjava/exception/Messages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/main/java/exception/SudokuDaoException.java" beforeDir="false" afterPath="$PROJECT_DIR$/Modell/src/main/java/pl/first/firstjava/exception/SudokuDaoException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/src/main/resources/Language_eng.properties" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/resources/Language_eng.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/src/main/resources/Language_pl.properties" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/resources/Language_pl.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/main/resources/board.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/resources/board.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/main/resources/menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/resources/menu.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,19 +110,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="pl.first.firstjava.App" />
-      <module name="ModelProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pl.first.firstjava.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.view.Main" />
       <module name="View" />
@@ -126,6 +119,51 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ModelProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pl.first.firstjava.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pl.first.firstjava" />
+      <option name="MAIN_CLASS_NAME" value="pl.first.firstjava.AppTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileSudokuBoardDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ModelProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pl.first.firstjava.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pl.first.firstjava" />
+      <option name="MAIN_CLASS_NAME" value="pl.first.firstjava.FileSudokuBoardDaoTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SudokuBoardDaoFactoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ModelProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pl.first.firstjava.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pl.first.firstjava" />
+      <option name="MAIN_CLASS_NAME" value="pl.first.firstjava.SudokuBoardDaoFactoryTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -145,52 +183,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SudokuBoardTest.cloneTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ModelProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pl.first.firstjava.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="pl.first.firstjava" />
-      <option name="MAIN_CLASS_NAME" value="pl.first.firstjava.SudokuBoardTest" />
-      <option name="METHOD_NAME" value="cloneTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SudokuBoardTest.columnCloneTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ModelProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pl.first.firstjava.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="pl.first.firstjava" />
-      <option name="MAIN_CLASS_NAME" value="pl.first.firstjava.SudokuBoardTest" />
-      <option name="METHOD_NAME" value="columnCloneTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="Application.Main" />
-      <item itemvalue="Application.App" />
+      <item itemvalue="JUnit.FileSudokuBoardDaoTest" />
+      <item itemvalue="JUnit.AppTest" />
+      <item itemvalue="JUnit.SudokuBoardDaoFactoryTest" />
       <item itemvalue="JUnit.SudokuBoardTest" />
-      <item itemvalue="JUnit.SudokuBoardTest.columnCloneTest" />
-      <item itemvalue="JUnit.SudokuBoardTest.cloneTest" />
+      <item itemvalue="Application.Main" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.App" />
         <item itemvalue="JUnit.SudokuBoardTest" />
-        <item itemvalue="JUnit.SudokuBoardTest.columnCloneTest" />
-        <item itemvalue="JUnit.SudokuBoardTest.cloneTest" />
+        <item itemvalue="JUnit.SudokuBoardDaoFactoryTest" />
+        <item itemvalue="JUnit.FileSudokuBoardDaoTest" />
+        <item itemvalue="JUnit.AppTest" />
       </list>
     </recent_temporary>
   </component>
