@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<Pane prefHeight="685.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.view.boardController">
+<Pane prefHeight="685.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.view.BoardController">
    <children>
       <GridPane fx:id="grid" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0">
         <columnConstraints>
@@ -37,7 +37,7 @@
       <Button fx:id="Read" layoutX="164.0" layoutY="627.0" mnemonicParsing="false" onAction="#loadFromFile" text="%saveFile" />
       <Button fx:id="Save" layoutX="53.0" layoutY="627.0" mnemonicParsing="false" onAction="#saveToFile" text="%readFile" />
       <Button fx:id="Exit" layoutX="440.0" layoutY="627.0" mnemonicParsing="false" onAction="#close" text="%close" />
-      <Button layoutX="177.0" layoutY="652.0" mnemonicParsing="false" onAction="#SaveBoardToBase" text="Baza" />
-      <Button layoutX="53.0" layoutY="652.0" mnemonicParsing="false" onAction="#ReadBoardFromBase" text="Baza Odczyt" />
+      <Button layoutX="177.0" layoutY="652.0" mnemonicParsing="false" onAction="#saveBoardToBase" text="Baza" />
+      <Button layoutX="53.0" layoutY="652.0" mnemonicParsing="false" onAction="#readBoardFromBase" text="Baza Odczyt" />
    </children>
 </Pane>

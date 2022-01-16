@@ -5,7 +5,6 @@ import java.util.Arrays;
 import java.util.List;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
-import org.apache.commons.lang3.builder.ToStringBuilder;
 
 
 public class SudokuBoard implements Serializable, Cloneable, Prototype<SudokuBoard> {
@@ -44,15 +43,15 @@ public class SudokuBoard implements Serializable, Cloneable, Prototype<SudokuBoa
         }
     }
 
-    public void setEditable(int x, int y){
+    public void setEditable(int x, int y) {
         board[x][y].setEmpty();
     }
 
-    public void setNotEditable(int x, int y){
+    public void setNotEditable(int x, int y) {
         board[x][y].setNotEmpty();
     }
 
-    public boolean isEditable(int x, int y){
+    public boolean isEditable(int x, int y) {
         return board[x][y].isEmpty();
     }
 
@@ -115,8 +114,10 @@ public class SudokuBoard implements Serializable, Cloneable, Prototype<SudokuBoa
         }
         return flag;
     }
-    public boolean isSudokuSafe()
-    {return checkBoard();}
+
+    public boolean isSudokuSafe() {
+        return checkBoard();
+    }
 
     public SudokuRow getRow(int y) {
         List<SudokuField> fields = Arrays.asList(new SudokuField[9]);
@@ -156,10 +157,10 @@ public class SudokuBoard implements Serializable, Cloneable, Prototype<SudokuBoa
         return string.toString();
     }
 
-    public SudokuBoard makeSudokuBoardFromString(String values){
-        for(int i = 0;i < 9;i++) {
-            for(int j = 0;j < 9;j++){
-                this.setBoard(i,j,Character.getNumericValue(values.charAt(i*9+j)));
+    public SudokuBoard makeSudokuBoardFromString(String values) {
+        for (int i = 0;i < 9;i++) {
+            for (int j = 0;j < 9;j++) {
+                this.setBoard(i,j,Character.getNumericValue(values.charAt(i * 9 + j)));
             }
         }
         return this;

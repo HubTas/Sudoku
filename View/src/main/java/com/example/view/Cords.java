@@ -5,43 +5,47 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
 public class Cords {
-    private int x;
-    private int y;
+    private int intx;
+    private int inty;
 
     public Cords(int x, int y) {
-        this.x = x;
-        this.y = y;
+        this.intx = x;
+        this.inty = y;
     }
 
-    public int getX() {
-        return x;
+    public int getIntx() {
+        return intx;
     }
 
-    public int getY() {
-        return y;
+    public int getInty() {
+        return inty;
     }
 
     @Override
     public String toString() {
         return new ToStringBuilder(this)
-                .append("x", x)
-                .append("y", y)
+                .append("x", intx)
+                .append("y", inty)
                 .toString();
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
+        if (this == o) {
+            return true;
+        }
 
-        if (o == null || getClass() != o.getClass()) return false;
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
 
         Cords cords = (Cords) o;
 
-        return new EqualsBuilder().append(x, cords.x).append(y, cords.y).isEquals();
+        return new EqualsBuilder().append(intx, cords.intx).append(inty, cords.inty).isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(x).append(y).toHashCode();
+        return new HashCodeBuilder(17, 37).append(intx).append(inty).toHashCode();
     }
 }

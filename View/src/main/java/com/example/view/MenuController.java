@@ -1,5 +1,10 @@
 package com.example.view;
 
+import java.io.IOException;
+import java.util.Locale;
+import java.util.ResourceBundle;
+import java.util.logging.FileHandler;
+import java.util.logging.Logger;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -7,15 +12,10 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
-import java.io.IOException;
-import java.util.Locale;
-import java.util.ResourceBundle;
-import java.util.logging.FileHandler;
-import java.util.logging.Logger;
 
-public class menuController {
+public class MenuController {
     @FXML
-    private ComboBox SudokuDifficulty;
+    private ComboBox sudokuDifficulty;
 
     private ResourceBundle bundle = ResourceBundle.getBundle("Language");
 
@@ -27,7 +27,7 @@ public class menuController {
 
     private InfoWindow window = new InfoWindow();
 
-    private final Logger logger = Logger.getLogger(menuController.class.getName());
+    private final Logger logger = Logger.getLogger(MenuController.class.getName());
 
     @FXML
     private Button authors;
@@ -48,8 +48,8 @@ public class menuController {
     private Button plLang;
 
     @FXML
-    void ChangeLangToEng(ActionEvent event) {
-        try{
+    void changeLangToEng(ActionEvent event) {
+        try {
             Locale.setDefault(new Locale("eng"));
             StageSetter.buildStage("/menu.fxml",bundle.getString("menuTitle"), bundle);
         } catch (IOException e) {
@@ -58,8 +58,8 @@ public class menuController {
     }
 
     @FXML
-    void ChangeLangToPl(ActionEvent event) {
-        try{
+    void changeLangToPl(ActionEvent event) {
+        try {
             Locale.setDefault(new Locale("pl"));
             StageSetter.buildStage("/menu.fxml",bundle.getString("menuTitle"), bundle);
         } catch (IOException e) {
@@ -71,7 +71,7 @@ public class menuController {
     private void initialize() throws IOException {
         FileHandler file = new FileHandler("Menu log");
         logger.addHandler(file);
-        SudokuDifficulty.getItems().setAll(
+        sudokuDifficulty.getItems().setAll(
                 bundle.getString("easyLvl"),
                 bundle.getString("mediumLvl"),
                 bundle.getString("hardLvl")
@@ -79,15 +79,17 @@ public class menuController {
     }
 
     @FXML
-    void generateSudoku(ActionEvent event) throws IOException{
-        try{
-            if(level == null){
-                menuController.level = SudokuDifficulty.getSelectionModel().getSelectedItem().toString();
+    void generateSudoku(ActionEvent event) throws IOException {
+        try {
+            if (level == null) {
+                MenuController.level = sudokuDifficulty.getSelectionModel()
+                        .getSelectedItem().toString();
                 logger.info(bundle.getString("lvl") + level);
             }
             StageSetter.buildStage("/board.fxml",bundle.getString("boardTitle"),bundle);
         } catch (NullPointerException e) {
-            window.text(bundle.getString("error"),bundle.getString("noDiff"), Alert.AlertType.WARNING);
+            window.text(bundle.getString("error"),bundle.getString("noDiff"),
+                    Alert.AlertType.WARNING);
             logger.warning(bundle.getString("noDiff"));
         }
     }
@@ -95,7 +97,9 @@ public class menuController {
     @FXML
     void showAutorzy(ActionEvent event) {
         ResourceBundle bundle1 = ResourceBundle.getBundle("com.example.view.Authors");
-        window.text(bundle.getString("authors"), bundle1.getObject("Author1") + "\n" + bundle1.getObject("Author2") + "\n" + bundle1.getObject("University"), Alert.AlertType.INFORMATION);
+        window.text(bundle.getString("authors"), bundle1.getObject("Author1") + "\n"
+                + bundle1.getObject("Author2") + "\n" + bundle1.getObject("University"),
+                Alert.AlertType.INFORMATION);
     }
 
     @FXML

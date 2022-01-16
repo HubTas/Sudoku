@@ -1,8 +1,6 @@
 package pl.first.firstjava;
 
 import java.io.Serializable;
-
-import org.apache.commons.lang3.ObjectUtils;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
@@ -58,8 +56,9 @@ public class SudokuField implements Serializable, Cloneable, Comparable<SudokuFi
 
     @Override
     public int compareTo(SudokuField o) {
-        if(o == null) throw new NullPointerException("Obj is empty");{}
-
+        if (o == null || this == null) {
+            throw new NullPointerException("Obj is empty");
+        }
         if (this.getFieldValue() == o.getFieldValue()) {
             return 0;
         } else if (this.getFieldValue() > o.getFieldValue()) {

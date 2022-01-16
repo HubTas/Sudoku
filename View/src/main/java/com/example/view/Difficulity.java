@@ -1,11 +1,10 @@
 package com.example.view;
 
-import pl.first.firstjava.SudokuBoard;
-
 import java.util.HashSet;
 import java.util.Random;
 import java.util.ResourceBundle;
 import java.util.Set;
+import pl.first.firstjava.SudokuBoard;
 
 public class Difficulity {
     public static final int levelMultiplayer = 5;
@@ -26,10 +25,6 @@ public class Difficulity {
     }
 
     public SudokuBoard level(SudokuBoard board, String level) {
-//        if(!(level.equals(bundle.getString("easyLvl"))
-//                ||level.equals(bundle.getString("mediumLvl"))
-//                ||level.equals(bundle.getString("hardLvl")))){
-//    }
         if (level.equals(bundle.getString("easyLvl"))) {
             fillSet(levelMultiplayer * levels[0]);
         } else if (level.equals(bundle.getString("mediumLvl"))) {
@@ -38,8 +33,8 @@ public class Difficulity {
             fillSet(levelMultiplayer * levels[2]);
         }
         for (Cords cord : cords) {
-            board.setBoard(cord.getX(), cord.getY(), 0);
-            board.setEditable(cord.getX(), cord.getY());
+            board.setBoard(cord.getIntx(), cord.getInty(), 0);
+            board.setEditable(cord.getIntx(), cord.getInty());
         }
         return board;
     }
