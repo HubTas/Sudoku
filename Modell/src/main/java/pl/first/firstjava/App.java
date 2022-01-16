@@ -9,10 +9,10 @@ package pl.first.firstjava;
  */
 public class App{
     public static void main(final String[] args) {
-//            SudokuSolver solver = new BacktrackingSudokuSolver();
-//            SudokuBoard test = new SudokuBoard(solver);
-//            test.solveGame();
-//            System.out.println(test.toString());
+            SudokuSolver solver = new BacktrackingSudokuSolver();
+            SudokuBoard test = new SudokuBoard(solver);
+            test.solveGame();
+            System.out.println(test.toString());
 
     }
 

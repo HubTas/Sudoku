@@ -1,6 +1,7 @@
 package com.example.view;
 
 import exception.FileIsNullException;
+import pl.first.firstjava.*;
 import pl.first.firstjava.exception.SudokuDaoException;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -10,11 +11,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.stage.FileChooser;
-import pl.first.firstjava.BacktrackingSudokuSolver;
-import pl.first.firstjava.SudokuBoard;
-import pl.first.firstjava.SudokuSolver;
-import pl.first.firstjava.Dao;
-import pl.first.firstjava.FileSudokuBoardDao;
+
 import java.io.IOException;
 import java.util.ResourceBundle;
 import java.io.File;
@@ -22,7 +19,7 @@ import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 
 public class boardController {
-
+    private String title;
     @FXML
     private GridPane grid;
 
@@ -48,6 +45,7 @@ public class boardController {
     private Dao<SudokuBoard> fileSudokuBoardDao;
     private FileChooser fileChooser = new FileChooser();
     private static SudokuBoard sudokuBoard;
+    private Dao<SudokuBoard> databaseSudokuBoardDao;
 
     @FXML
     private void initialize() throws IOException {
@@ -127,43 +125,87 @@ public class boardController {
 
     @FXML
     private void saveToFile(ActionEvent event) throws SudokuDaoException {
-        if(isValueValid()) {
-            update();
-            try {
-                fileSudokuBoardDao = new FileSudokuBoardDao("plik.txt");
-                fileSudokuBoardDao.write(board);
-                logger.info(bundle.getString("save"));
-            } catch (NullPointerException e) {
-                throw new FileIsNullException(bundle.getString("fileNull"));
-            } catch (SudokuDaoException e) {
-                throw new SudokuDaoException(bundle.getString("saveFailed"));
-            }
-        } else {
-            logger.warning(bundle.getString("wrongValue"));
-            window.text(bundle.getString("error"), bundle.getString("wrongValue"), Alert.AlertType.WARNING);
-        }
+//        if(isValueValid()) {
+//            update();
+//            try {
+//                fileSudokuBoardDao = new FileSudokuBoardDao("plik.txt");
+//                fileSudokuBoardDao.write(board);
+//                logger.info(bundle.getString("save"));
+//            } catch (NullPointerException e) {
+//                throw new FileIsNullException(bundle.getString("fileNull"));
+//            } catch (SudokuDaoException e) {
+//                throw new SudokuDaoException(bundle.getString("saveFailed"));
+//            }
+//        } else {
+//            logger.warning(bundle.getString("wrongValue"));
+//            window.text(bundle.getString("error"), bundle.getString("wrongValue"), Alert.AlertType.WARNING);
+//        }
     }
 
     @FXML
     private void loadFromFile(ActionEvent event) throws SudokuDaoException {
-        if(isValueValid()) {
-            update();
-        }
-        try {
-            fileSudokuBoardDao = new FileSudokuBoardDao("plik.txt");
-            sudokuBoard = fileSudokuBoardDao.read();
-            bundle.getString("read");
-            logger.info(sudokuBoard.toString());
-        } catch (NullPointerException e) {
-            throw new FileIsNullException(bundle.getString("fileNull"));
-        } catch (SudokuDaoException e) {
-            throw new SudokuDaoException(bundle.getString("loadFailed"));
-        }
-        if(sudokuBoard != null) {
-            board = sudokuBoard;
+//        if(isValueValid()) {
+//            update();
+//        }
+//        try {
+//            fileSudokuBoardDao = new FileSudokuBoardDao("plik.txt");
+//            sudokuBoard = fileSudokuBoardDao.read();
+//            bundle.getString("read");
+//            logger.info(sudokuBoard.toString());
+//        } catch (NullPointerException e) {
+//            throw new FileIsNullException(bundle.getString("fileNull"));
+//        } catch (SudokuDaoException e) {
+//            throw new SudokuDaoException(bundle.getString("loadFailed"));
+//        }
+//        if(sudokuBoard != null) {
+//            board = sudokuBoard;
+//            grid.getChildren().clear();
+//            fillGridPane();
+//        }
+    }
+    @FXML
+    void ReadBoardFromBase(ActionEvent event){
+        try{
+            board = (SudokuBoard) sudokuReader("Tabela").clone();
             grid.getChildren().clear();
             fillGridPane();
+        } catch(Exception e){
+            logger.info("Nie udalo sie odczytac");
         }
     }
 
+    @FXML
+    void SaveBoardToBase(ActionEvent event) throws IOException{
+        try{
+            sudokuMaker("Tabela");
+            logger.info("Udalo sie");
+        } catch (Exception e) {
+            logger.info("Nie udalo sie zapisac");
+        }
+    }
+
+    SudokuBoard sudokuReader(String file)
+    {
+        SudokuBoard baseBoard = null;
+        try(JdbcSudokuBoardDao jdbcSudokuBoardDao = new JdbcSudokuBoardDao(file))
+        {
+            databaseSudokuBoardDao = jdbcSudokuBoardDao;
+            baseBoard = databaseSudokuBoardDao.read();
+        } catch (SudokuDaoException e){
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return baseBoard;
+    }
+
+    void sudokuMaker(String file)
+    {
+        try (JdbcSudokuBoardDao jdbcSudokuBoardDao = new JdbcSudokuBoardDao("Tabela")) {
+            databaseSudokuBoardDao = jdbcSudokuBoardDao;
+            databaseSudokuBoardDao.write(board);
+        } catch (Exception e) {
+            logger.info("Nie udalo sie zapisac");
+        }
+    }
 }

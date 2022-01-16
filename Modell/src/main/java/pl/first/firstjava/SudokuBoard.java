@@ -147,14 +147,21 @@ public class SudokuBoard implements Serializable, Cloneable, Prototype<SudokuBoa
 
     @Override
     public String toString() {
-        ToStringBuilder string = new ToStringBuilder(this);
-        string.append(System.lineSeparator());
+        StringBuilder string = new StringBuilder();
             for (int i = 0; i < 9; i++) {
                 for (int j = 0; j < 9; j++) {
                     string.append(board[i][j].getFieldValue());
                 }
-                string.append(System.lineSeparator());
             }
         return string.toString();
+    }
+
+    public SudokuBoard makeSudokuBoardFromString(String values){
+        for(int i = 0;i < 9;i++) {
+            for(int j = 0;j < 9;j++){
+                this.setBoard(i,j,Character.getNumericValue(values.charAt(i*9+j)));
+            }
+        }
+        return this;
     }
 }
