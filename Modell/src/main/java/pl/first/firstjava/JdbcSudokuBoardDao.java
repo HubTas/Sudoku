@@ -6,6 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import pl.first.firstjava.exception.DataBaseException;
 import pl.first.firstjava.exception.SudokuDaoException;
 
 public class JdbcSudokuBoardDao implements Dao<SudokuBoard>,AutoCloseable {
@@ -29,12 +30,12 @@ public class JdbcSudokuBoardDao implements Dao<SudokuBoard>,AutoCloseable {
     }
 
     @Override
-    public void close() throws Exception {
+    public void close() throws DataBaseException {
         try {
             connection.close();
-
+            statement.close();
         } catch (SQLException e) {
-           e.printStackTrace();
+           throw new DataBaseException("Bad data base exception");
         }
     }
 
@@ -50,10 +51,9 @@ public class JdbcSudokuBoardDao implements Dao<SudokuBoard>,AutoCloseable {
             resultSet.next();
             values = resultSet.getString(2);
             board.makeSudokuBoardFromString(values);
-            statement.close();
             resultSet.close();
         } catch (SQLException e) {
-            e.printStackTrace();
+            throw new DataBaseException("Bad read data base exception");
         }
         return board;
 
@@ -68,7 +68,7 @@ public class JdbcSudokuBoardDao implements Dao<SudokuBoard>,AutoCloseable {
             statement.setString(2,values);
             statement.executeUpdate();
         } catch (SQLException e) {
-            throw new SudokuDaoException("e");
+            throw new DataBaseException("Bad write data base exception");
         }
     }
 }
