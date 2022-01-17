@@ -5,11 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26f8275a-045b-49db-9704-836a65531d20" name="Default Changelist" comment="Zadanie 12, checkstyle">
-      <change afterPath="$PROJECT_DIR$/Modell/src/test/java/pl/first/firstjava/BaseSudokuBoardDaoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_beust_jcommander_1_78.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_3_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_testng_testng_7_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_webjars_jquery_3_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modell/src/test/java/pl/first/firstjava/BaseSudokuBoardTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modell/ModelProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Modell/ModelProject.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modell/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Modell/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Modell/src/main/java/pl/first/firstjava/JdbcSudokuBoardDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Modell/src/main/java/pl/first/firstjava/JdbcSudokuBoardDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/main/java/com/example/view/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/java/com/example/view/BoardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/main/resources/Language_eng.properties" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/resources/Language_eng.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/main/resources/Language_pl.properties" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/resources/Language_pl.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

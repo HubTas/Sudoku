@@ -6,10 +6,14 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ResourceBundle;
+import java.util.logging.Logger;
 import pl.first.firstjava.exception.DataBaseException;
 import pl.first.firstjava.exception.SudokuDaoException;
 
 public class JdbcSudokuBoardDao implements Dao<SudokuBoard>,AutoCloseable {
+    private final Logger logger = Logger.getLogger(JdbcSudokuBoardDao.class.getName());
+    private ResourceBundle bundle = ResourceBundle.getBundle("Language");
     private static String url = "jdbc:postgresql://localhost:5432/SudokuBoard";
     private static String username = "postgres";
     private static String password = "Haslo";
@@ -25,7 +29,7 @@ public class JdbcSudokuBoardDao implements Dao<SudokuBoard>,AutoCloseable {
             statement = connection.createStatement();
         } catch (SQLException e) {
             e.printStackTrace();
-            System.out.println("Nie Udalo sie polaczyc");
+            logger.info(bundle.getString("connectionError"));
         }
     }
 
@@ -35,7 +39,7 @@ public class JdbcSudokuBoardDao implements Dao<SudokuBoard>,AutoCloseable {
             connection.close();
             statement.close();
         } catch (SQLException e) {
-           throw new DataBaseException("Bad data base exception");
+           throw new DataBaseException(bundle.getString("connectionError"));
         }
     }
 
@@ -53,7 +57,7 @@ public class JdbcSudokuBoardDao implements Dao<SudokuBoard>,AutoCloseable {
             board.makeSudokuBoardFromString(values);
             resultSet.close();
         } catch (SQLException e) {
-            throw new DataBaseException("Bad read data base exception");
+            throw new DataBaseException(bundle.getString("readError"));
         }
         return board;
 
@@ -68,7 +72,7 @@ public class JdbcSudokuBoardDao implements Dao<SudokuBoard>,AutoCloseable {
             statement.setString(2,values);
             statement.executeUpdate();
         } catch (SQLException e) {
-            throw new DataBaseException("Bad write data base exception");
+            throw new DataBaseException(bundle.getString("saveError"));
         }
     }
 }
