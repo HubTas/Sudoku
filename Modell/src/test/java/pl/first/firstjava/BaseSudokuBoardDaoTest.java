@@ -10,8 +10,6 @@ public class BaseSudokuBoardDaoTest {
     private SudokuSolver sudokuSolver = new BacktrackingSudokuSolver();
     private SudokuBoard sudokuBoard = new SudokuBoard(sudokuSolver);
     private SudokuBoard sudokuBoardSecond;
-    private SudokuBoard sudokuBoardThird = new SudokuBoard(sudokuSolver);
-    private SudokuBoard sudokuBoardForth = new SudokuBoard(sudokuSolver);
     private Dao<SudokuBoard> databaseSudokuBoardDao;
 
     @Test
