@@ -181,8 +181,9 @@ public class BoardController {
             board = (SudokuBoard) sudokuReader("Tabela").clone();
             grid.getChildren().clear();
             fillGridPane();
+            logger.info(bundle.getString("readGood"));
         } catch (Exception e) {
-            logger.info("Nie udalo sie odczytac");
+            logger.info(bundle.getString("readError"));
         }
     }
 
@@ -190,9 +191,9 @@ public class BoardController {
     void saveBoardToBase(ActionEvent event) throws IOException {
         try {
             sudokuMaker("Tabela");
-            logger.info("Udalo sie");
+            logger.info(bundle.getString("saveGood"));
         } catch (Exception e) {
-            logger.info("Nie udalo sie zapisac");
+            logger.info(bundle.getString("saveError"));
         }
     }
 
@@ -214,7 +215,7 @@ public class BoardController {
             databaseSudokuBoardDao = jdbcSudokuBoardDao;
             databaseSudokuBoardDao.write(board);
         } catch (Exception e) {
-            logger.info("Nie udalo sie zapisac");
+            logger.info(bundle.getString("saveError"));
         }
     }
 }

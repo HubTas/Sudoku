@@ -37,7 +37,7 @@
       <Button fx:id="Read" layoutX="164.0" layoutY="627.0" mnemonicParsing="false" onAction="#loadFromFile" text="%saveFile" />
       <Button fx:id="Save" layoutX="53.0" layoutY="627.0" mnemonicParsing="false" onAction="#saveToFile" text="%readFile" />
       <Button fx:id="Exit" layoutX="440.0" layoutY="627.0" mnemonicParsing="false" onAction="#close" text="%close" />
-      <Button layoutX="177.0" layoutY="652.0" mnemonicParsing="false" onAction="#saveBoardToBase" text="Baza" />
-      <Button layoutX="53.0" layoutY="652.0" mnemonicParsing="false" onAction="#readBoardFromBase" text="Baza Odczyt" />
+      <Button layoutX="177.0" layoutY="652.0" mnemonicParsing="false" onAction="#saveBoardToBase" text="%dbsave" />
+      <Button layoutX="53.0" layoutY="652.0" mnemonicParsing="false" onAction="#readBoardFromBase" text="%dbread" />
    </children>
 </Pane>
