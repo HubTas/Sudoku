@@ -1,12 +1,18 @@
 package pl.first.firstjava;
 
+//import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
-public class SudokuField implements Serializable, Cloneable, Comparable<SudokuField> {
+public class SudokuField implements Serializable, Cloneable, Comparable<SudokuField>, Observer {
     private int value;
+
+    private List<PropertyChangeListener> listener = new ArrayList<PropertyChangeListener>();
 
     public void setEmpty() {
         isEmpty = true;
@@ -66,5 +72,27 @@ public class SudokuField implements Serializable, Cloneable, Comparable<SudokuFi
         } else {
             return -1;
         }
+    }
+
+    @Override
+    public void registerChangeListener(PropertyChangeListener newListener) {
+        if (!listener.contains(newListener)) {
+            listener.add(newListener);
+        }
+    }
+
+    @Override
+    public void removeChangeListener(PropertyChangeListener newListener) {
+        listener.remove(newListener);
+    }
+
+    //    private void notifyListeners(String property, int oldValue, int newValue) {
+    //        for (PropertyChangeListener name : listener) {
+    //            name.propertyChange(new PropertyChangeEvent(this, property, oldValue, newValue));
+    //        }
+    //    }
+
+    public List<PropertyChangeListener> getPropertyChangeListener() {
+        return listener;
     }
 }

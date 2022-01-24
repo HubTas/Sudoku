@@ -1,6 +1,7 @@
 package pl.first.firstjava;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import org.apache.commons.lang3.builder.EqualsBuilder;
@@ -86,6 +87,21 @@ public class SudokuBoard implements Serializable, Cloneable, Prototype<SudokuBoa
 
     public int getBoard(int x, int y) {
         return board[x][y].getFieldValue();
+    }
+
+    public List<SudokuField> getThisBoard() {
+        List<SudokuField> fields = new ArrayList<SudokuField>();
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                fields.add(getField(i, j));
+            }
+        }
+
+        return fields;
+    }
+
+    public SudokuField getField(int x, int y) {
+        return board[x][y];
     }
 
     public void setBoard(int x, int y, int value) {

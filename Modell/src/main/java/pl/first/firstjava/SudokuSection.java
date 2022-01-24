@@ -1,12 +1,14 @@
 package pl.first.firstjava;
 
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
 import java.util.Collections;
 import java.util.List;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
-public abstract class SudokuSection {
+public abstract class SudokuSection implements PropertyChangeListener {
 
     private List<SudokuField> fields;
 
@@ -43,4 +45,10 @@ public abstract class SudokuSection {
     public String toString() {
         return new ToStringBuilder(this).append("fields", fields).toString();
     }
+
+    @Override
+    public void propertyChange(PropertyChangeEvent event) {
+        this.verify();
+    }
 }
+

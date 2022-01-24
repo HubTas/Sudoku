@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26f8275a-045b-49db-9704-836a65531d20" name="Default Changelist" comment="Zadanie 12, checkstyle">
-      <change afterPath="$PROJECT_DIR$/Modell/src/main/java/pl/first/firstjava/resources/Language.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modell/src/main/java/pl/first/firstjava/resources/Language_eng.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modell/src/main/java/pl/first/firstjava/resources/Language_pl.properties" afterDir="false" />
+    <list default="true" id="26f8275a-045b-49db-9704-836a65531d20" name="Default Changelist" comment="Zadanie 12">
+      <change afterPath="$PROJECT_DIR$/Modell/src/main/java/pl/first/firstjava/Observer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Modell/ModelProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Modell/ModelProject.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modell/src/main/java/pl/first/firstjava/JdbcSudokuBoardDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Modell/src/main/java/pl/first/firstjava/JdbcSudokuBoardDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modell/src/main/java/pl/first/firstjava/SudokuBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/Modell/src/main/java/pl/first/firstjava/SudokuBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modell/src/main/java/pl/first/firstjava/SudokuField.java" beforeDir="false" afterPath="$PROJECT_DIR$/Modell/src/main/java/pl/first/firstjava/SudokuField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modell/src/main/java/pl/first/firstjava/SudokuSection.java" beforeDir="false" afterPath="$PROJECT_DIR$/Modell/src/main/java/pl/first/firstjava/SudokuSection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/src/main/java/com/example/view/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/java/com/example/view/BoardController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/src/main/resources/Language_eng.properties" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/resources/Language_eng.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/src/main/resources/Language_pl.properties" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/resources/Language_pl.properties" afterDir="false" />
@@ -26,8 +26,8 @@
       <list>
         <option value="JUnit5 Test Class" />
         <option value="module-info" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -105,7 +105,7 @@
       <recent name="pl.first.firstjava" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BaseSudokuBoardDaoTest">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="pl.first.firstjava.App" />
       <module name="ModelProject" />
@@ -189,8 +189,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BaseSudokuBoardDaoTest" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.BaseSudokuBoardDaoTest" />
         <item itemvalue="JUnit.BaseSudokuBoardDaoTest.writeReadDbTest" />
         <item itemvalue="JUnit.BaseSudokuBoardDaoTest.transactionACIDTest" />
         <item itemvalue="Application.App" />
@@ -260,7 +260,11 @@
       <workItem from="1642364570184" duration="12442000" />
       <workItem from="1642380557240" duration="210000" />
       <workItem from="1642380992816" duration="1077000" />
-      <workItem from="1642382446043" duration="537000" />
+      <workItem from="1642382446043" duration="892000" />
+      <workItem from="1642863731784" duration="6937000" />
+      <workItem from="1642936102047" duration="2810000" />
+      <workItem from="1642939096841" duration="23000" />
+      <workItem from="1642984321335" duration="2450000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;Przeksztalcanie struktury projektu&quot;">
       <created>1634845564660</created>
@@ -339,7 +343,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642372853862</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Zadanie 12">
+      <created>1642383218126</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1642383218126</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -383,7 +394,8 @@
     <MESSAGE value="Zadanie 11, wstep do FX i internacjonalizacji" />
     <MESSAGE value="poprawki" />
     <MESSAGE value="Zadanie 12, checkstyle" />
-    <option name="LAST_COMMIT_MESSAGE" value="Zadanie 12, checkstyle" />
+    <MESSAGE value="Zadanie 12" />
+    <option name="LAST_COMMIT_MESSAGE" value="Zadanie 12" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

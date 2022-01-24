@@ -3,17 +3,27 @@ package com.example.view;
 import exception.FileIsNullException;
 import java.io.File;
 import java.io.IOException;
+import java.util.Optional;
+import java.util.Random;
 import java.util.ResourceBundle;
 import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 import javafx.application.Platform;
+import javafx.beans.binding.Bindings;
+import javafx.beans.property.adapter.JavaBeanIntegerProperty;
+import javafx.beans.property.adapter.JavaBeanIntegerPropertyBuilder;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.control.TextInputDialog;
 import javafx.scene.layout.GridPane;
 import javafx.stage.FileChooser;
+import javafx.util.converter.NumberStringConverter;
 import pl.first.firstjava.BacktrackingSudokuSolver;
 import pl.first.firstjava.Dao;
 import pl.first.firstjava.FileSudokuBoardDao;
@@ -52,6 +62,9 @@ public class BoardController {
     private FileChooser fileChooser = new FileChooser();
     private static SudokuBoard sudokuBoard;
     private Dao<SudokuBoard> databaseSudokuBoardDao;
+    private final TextField[][] textFields = new TextField[9][9];
+    private SudokuBoard edit;
+
 
     @FXML
     private void initialize() throws IOException {
@@ -60,6 +73,11 @@ public class BoardController {
         board.solveGame();
         level.level(board, MenuController.getLevel());
         fillGridPane();
+        try {
+            cleaner();
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+        }
     }
 
     private void fillGridPane() {
@@ -68,17 +86,86 @@ public class BoardController {
                 TextField field = new TextField();
                 field.setMinSize(50, 50);
                 field.setOpacity(100);
-                if (!(board.getBoard(i,j) == 0 || board.isEditable(i,j))) {
+                if (board.getBoard(i,j) != 0) {
                     field.setStyle("-fx-text-fill: rgba(75,128,0,0.74);-fx-alignment: center;");
                     field.setDisable(true);
                     field.setText(String.valueOf(board.getBoard(i,j)));
                 } else {
                     field.setStyle("-fx-background-color: rgba(255,0,0,0.11);"
                             + "-fx-alignment: center");
+                    field.setDisable(false);
                     field.setText("");
                 }
-                grid.add(field,j,i);
+                grid.add(field,i,j);
             }
+        }
+    }
+
+    public void cleaner() throws CloneNotSupportedException {
+        edit = (SudokuBoard) board.clone();
+        int number = 0;
+        String level = MenuController.getLevel();
+        if (level.equals(bundle.getString("easyLvl"))) {
+            number = 5;
+        } else if (level.equals(bundle.getString("mediumLvl"))) {
+            number = 10;
+        } else {
+            number = 15;
+        }
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                bind(i, j);
+            }
+        }
+        while (number > 0) {
+            for (int row = 0; row < 9; row++) {
+                for (int column = 0; column < 9; column++) {
+            if (board.getBoard(column, row) == 0) {
+                TextField f = (TextField) getNodeFromGridPane(grid, column, row);
+                    f.setDisable(false);
+                    bind(row, column);
+                    f.clear();
+
+                    f.textProperty().addListener(new ChangeListener<String>() {
+                        @Override
+                        public void changed(final ObservableValue<? extends String> observable,
+                                            final String oldValue, final String newValue) {
+                            if (!(newValue.matches("[1-9]|"))) {
+                                f.clear();
+                            }
+                        }
+                    });
+                    number--;
+            }
+                }
+
+            }
+        }
+    }
+
+    private Node getNodeFromGridPane(GridPane gridPane, int col, int row) {
+        for (Node node : gridPane.getChildren()) {
+            if (GridPane.getColumnIndex(node) == col && GridPane.getRowIndex(node) == row) {
+                return node;
+            }
+        }
+        return null;
+    }
+
+    public void bind(int i, int j) {
+
+        try {
+            JavaBeanIntegerPropertyBuilder builder =
+                    JavaBeanIntegerPropertyBuilder.create();
+
+            JavaBeanIntegerProperty intProperty =
+                    builder.bean(board.getThisBoard().get(i * 9 + j)).name("value")
+                            .build();
+
+            Bindings.bindBidirectional(textFields[i][j].textProperty(), intProperty,
+                    new NumberStringConverter());
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
         }
     }
 
@@ -177,8 +264,15 @@ public class BoardController {
 
     @FXML
     void readBoardFromBase(ActionEvent event) {
+        TextInputDialog dialog = new TextInputDialog("");
+        dialog.setTitle(bundle.getString("readingTitle"));
+        dialog.setHeaderText(bundle.getString("reader"));
+        dialog.setContentText(bundle.getString("name"));
+
+        // Traditional way to get the response value.
+        Optional<String> result = dialog.showAndWait();
         try {
-            board = (SudokuBoard) sudokuReader("Tabela").clone();
+            board = (SudokuBoard) sudokuReader(result.get()).clone();
             grid.getChildren().clear();
             fillGridPane();
             logger.info(bundle.getString("readGood"));
@@ -190,7 +284,7 @@ public class BoardController {
     @FXML
     void saveBoardToBase(ActionEvent event) throws IOException {
         try {
-            sudokuMaker("Tabela");
+            sudokuMaker();
             logger.info(bundle.getString("saveGood"));
         } catch (Exception e) {
             logger.info(bundle.getString("saveError"));
@@ -210,8 +304,13 @@ public class BoardController {
         return baseBoard;
     }
 
-    void sudokuMaker(String file) {
-        try (JdbcSudokuBoardDao jdbcSudokuBoardDao = new JdbcSudokuBoardDao("Tabela")) {
+    void sudokuMaker() {
+        TextInputDialog dialog = new TextInputDialog("");
+        dialog.setTitle(bundle.getString("savingTitle"));
+        dialog.setHeaderText(bundle.getString("saver"));
+        dialog.setContentText(bundle.getString("name"));
+        Optional<String> result = dialog.showAndWait();
+        try (JdbcSudokuBoardDao jdbcSudokuBoardDao = new JdbcSudokuBoardDao(result.get())) {
             databaseSudokuBoardDao = jdbcSudokuBoardDao;
             databaseSudokuBoardDao.write(board);
         } catch (Exception e) {
